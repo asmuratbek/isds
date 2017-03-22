@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    {% if main_slider %}
+        <div class="container-fluid slides">
+            <div class="main_slider">
+                {% for item in main_slider %}
+                    <div class="items"><img src="{{ item.image.url }}" alt="">
+                        <div class="caption_title"><img src="{% static 'img/captitile.png' %}" alt=""></div>
+                        <div class="caption_slogan">{{ item.text }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    {% if reformed_news %}
+        <div class="container-fluid news">
+            <div class="container novosti">
+                <div class="section_title"><span class="news_title">Новости</span></div>
+                <div class="no_padding news_block">
+                    {% for news in reformed_news %}
+                        <div class="{{ news.class_name }}">
+                            <div class="news_post">
+                                <div class="post_image"><img src="{{ news.image.url }}" alt=""></div>
+                                <div class="news_post_text">
+                                    <div class="title">{{ news.title }}</div>
+                                    <div class="date no_padding">{{ news.date|date:"d.m.y" }}</div>
+                                    <div class="news_text">{{ news.text|safe }}</div>
+
+                                </div>
+                                <div class="share">
+                                    <a class="share_button"><span class="share_text">Поделиться</span><i
+                                            class="fa fa-share"
+                                            aria-hidden="true"></i>
+                                        <div class="ya-share2"
+                                             data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a href="{% url 'news' %}" class="more_news"><span class="more_text">больше новостей</span><i
+                        class="fa fa-arrow-right"
+                        aria-hidden="true"></i></a>
+            </div>
+        </div>
+    {% endif %}
+    <div class="container video_slider">
+
+        {% if video_slider %}
+            <div class="container-fluid slides">
+                <div class="video1_slider">
+                    {% for item in video_slider %}
+                        <div class="items">
+
+                            <div style="position:relative;height:0;padding-bottom:56.25%">
+                                <iframe src="https://www.youtube.com/embed/{{ item.video }}" width="640"
+                                        height="360" frameborder="0"
+                                        style="position:absolute;width:100%;height:100%;left:0"
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <div class="container-fluid no_padding">
+        <div class="section_title default_title">Истории</div>
+        <div class="stories_block">
+            <div class="container stories">
+                <div class="stories_wrap">
+                    {% for stories in history %}
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="stories_post">
+                                <div class="stories_image"><img src="{{ stories.image.url }}" alt=""></div>
+                                <div class="date no_padding">{{ stories.date|date:"d.m.y" }}</div>
+                                <div class="stories_title">{{ stories.title }}</div>
+                                <div class="blog_text">{{ stories.text|safe }}
+                                </div>
+                                <div class="no_padding">
+                                    <a class="read" href="{% url 'get_history' pk=stories.id %}">ЧИТАТЬ</a>
+                                    <a class="share_button"><span class="share_text">Поделиться</span><i
+                                            class="fa fa-share"
+                                            aria-hidden="true"></i>
+                                        <div class="ya-share2"
+                                             data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a href="{% url 'history' %}" class="more_news"><span class="more_text">просмотреть истории</span><i
+                        class="fa fa-arrow-right"
+                        aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container_fluid partners_company">
+        <div class="section_title"><span class="news_title">наши партнеры</span></div>
+        <div class="container partners">
+            {% for partner in partners %}
+            <div class="partner"><a href="http://{{ partner.url }}"><img src="{{ partner.image.url }}" alt=""></a></div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ block.super }}
+{% endblock %}

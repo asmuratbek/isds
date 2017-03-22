@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container-fluid ">
+        <div class="section_title"><span class="news_title">БЛОГ</span></div>
+        <div class="blog resources">
+            <div class="container stories">
+                <div class="stories_wrap">
+                    {% for blog in pages %}
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12 blog_post">
+                            <div class="blog_image"><img src="{{ blog.image.url }}" alt=""></div>
+                            <div class="date no_padding"><p>{{ blog.date|date:"d.m.y" }}</p></div>
+                            <div class="title">
+                                        <a href="{% url 'get_blog' pk=blog.id %}">{{ blog.title }}</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 blog_text">
+                                {{ blog.text|safe }}
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 no_padding">
+                                <div class="col-sm-12 col-md-12 col-xs-12 no_padding">
+                                    <a class="read" href="{% url 'get_blog' pk=blog.id %}">ЧИТАТЬ</a>
+                                    <a class="share_button"><span class="share_text">Поделиться</span><i
+                                            class="fa fa-share"
+                                            aria-hidden="true"></i>
+                                        <div class="ya-share2"
+                                             data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <ul class="pagination">
+                    {% for page in pages.paginator.page_range %}
+                        {% if page == pages.number %}
+                            <li class="active"><a>
+                                <span>{{ page }}</span></a>
+                            </li>
+                        {% else %}
+                            <li><a href="?page={{ page }}">
+                                <span>{{ page }}</span></a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

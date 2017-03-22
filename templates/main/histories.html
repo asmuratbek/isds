@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container-fluid no_padding">
+        <div class="section_title default_title">Истории</div>
+        <div class="stories_block">
+            <div class="container stories">
+
+                <div class="stories_wrap">
+                    {% for stories in history %}
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="stories_post">
+                                <div class="stories_image"><img src="{{ stories.image.url }}" alt=""></div>
+                                <div class="date no_padding">{{ stories.date|date:"d.m.y" }}</div>
+                                <div class="stories_title">{{ stories.title }}</div>
+                                <div class="blog_text">{{ stories.text|safe }}
+                                </div>
+                                <div class="no_padding">
+                                    <a class="read" href="{% url 'get_history' pk=stories.id %}">ЧИТАТЬ</a>
+                                    <a class="share_button"><span class="share_text">Поделиться</span><i
+                                            class="fa fa-share"
+                                            aria-hidden="true"></i>
+                                        <div class="ya-share2"
+                                             data-services="vkontakte,facebook,odnoklassniki,twitter"></div>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <ul class="pagination">
+                    {% for page in pages.paginator.page_range %}
+                        {% if page == pages.number %}
+                            <li class="active"><a>
+                                <span>{{ page }}</span></a>
+                            </li>
+                        {% else %}
+                            <li><a href="?page={{ page }}">
+                                <span>{{ page }}</span></a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

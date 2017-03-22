@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container programs">
+            <div class="section_title"><span class="news_title">Программы</span></div>
+            <div class="programs_block">
+                <div class="left_side col-md-8 col-sm-8 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12 squares_posts">
+                        <div class=" col-md-6 col-xs-12 col-md-6 program_post squares_post">
+                            <div class="programs_post_title">Местные инициативы
+                                по БКР:
+                            </div>
+                            <ul>
+                                {% for i in local %}
+                                <li>{{ i.text }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class=" col-md-6 col-xs-12 col-md-6  program_post squares_post">
+                            <div class="programs_post_title">Региональные
+                                поездки
+                            </div>
+                            <ul>
+                                {% for i in regional %}
+                                <li>
+                                    {{ i.text }}
+                                </li>
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="under_square_post">
+                        <div class="under_square program_post">
+                            <div class="programs_post_title">Основные результаты:</div>
+                            <ul>
+                                {% for i in results %}
+                                <li>
+                                    {{ i.text }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_side">
+                    <div class="col-sm-12 col-xs-12 program_post long_post">
+                        <div class="programs_post_title">Основные
+                            мероприятия и
+                            результаты (2014-2015):
+                        </div>
+                        <ul>
+                            {% for i in main %}
+                            <li>
+                                {{ i.text }}
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid tourism_block">
+        <div class="container tourism">
+            <div class="section_title"><span class="news_title">устойчивый туризм</span></div>
+        </div>
+        <div class="container tourism_block_wall"></div>
+        <div class="container tourism_text"><p>{{ tourism.text }}</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container social_projects">
+            <div class="section_title"><span class="news_title">социальные проекты</span></div>
+            <div class="social_projects_wrap">
+                {% for i in  socialp %}
+                <div class="col-md-4 col-sm-4 col-xs-12 social_projects_columns">
+                    <p>
+                        {{ i.text }}
+                    </p>
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

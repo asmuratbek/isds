@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="container-fluid slides">
+        <div class="container photo_slider">
+            {% for item in gallery %}
+                <div class="items"><img src="{{ item.image.url }}" alt="">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ block.super }}
+{% endblock %}
