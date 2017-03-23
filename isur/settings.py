@@ -26,14 +26,13 @@ _PATH = os.path.abspath(os.path.dirname(__file__))
 SECRET_KEY = 'u^=4f78ok9&%d-*$oj9b725#(sb_e9cy*kw$!4i$4tu#4d45#='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
