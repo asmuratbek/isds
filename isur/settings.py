@@ -33,10 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
-=======
     'jet',
->>>>>>> 95febfdd528edcff5fea2f95b7c01a9fa2ffa13d
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
