@@ -22,6 +22,7 @@ from isur import settings
 
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', admin.site.urls),
     url(r'^fixtures/(?P<name>\w+)$', fixtures, name='fixtures'),
     url(r'^$', main, name='main'),
