@@ -29,7 +29,7 @@ def main(request):
     video_slide = Sliders.objects.filter(category__in=Category.objects.filter(title_ru='Видео слайдер')).distinct()
     main_slide = Sliders.objects.filter(category__in=Category.objects.filter(title_ru='Главныйс')).distinct()
     partners = Partners.objects.all()
-    contact = Contacts.objects.get()
+    contact = Contacts.objects.first()
 
 
     params = {
