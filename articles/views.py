@@ -4,11 +4,10 @@ import random
 
 from django.core.paginator import Paginator
 from django.http import JsonResponse
-from django.shortcuts import render
 
-from partners.models import *
 from articles.models import *
 from concepts.models import *
+from partners.models import *
 from social.views import *
 
 
@@ -17,7 +16,7 @@ def main(request):
     _news = Articles.objects.filter(article__in=Category.objects.filter(title_ru='Новости')).distinct().order_by(
         '-date')[:3]
     _blog = Articles.objects.filter(article__in=Category.objects.filter(title_ru='Блог')).distinct().order_by('-date')[
-           :3]
+            :3]
     history = Articles.objects.filter(article__in=Category.objects.filter(title_ru='Истории')).distinct().order_by(
         '-date')[:3]
     publications = Articles.objects.filter(
@@ -30,6 +29,8 @@ def main(request):
     video_slide = Sliders.objects.filter(category__in=Category.objects.filter(title_ru='Видео слайдер')).distinct()
     main_slide = Sliders.objects.filter(category__in=Category.objects.filter(title_ru='Главныйс')).distinct()
     partners = Partners.objects.all()
+    contact = Contacts.objects.get()
+
 
     params = {
         'reformed_news': reformed_news,
@@ -40,7 +41,8 @@ def main(request):
         'photo_slider': photo_slide,
         'video_slider': video_slide,
         'main_slider': main_slide,
-        'partners':partners,
+        'partners': partners,
+        'contact': contact,
     }
 
     params.update(social(request))
@@ -80,6 +82,7 @@ def news(request):
     }
 
     params.update(social(request))
+    params.update(contacts(request))
     return render(request, 'main/news.html', params)
 
 
@@ -94,6 +97,7 @@ def blog(request):
         'pages': pages,
     }
     params.update(social(request))
+    params.update(contacts(request))
     return render(request, 'main/blog.html', params)
 
 
@@ -132,6 +136,7 @@ def get_blog(request, pk):
     }
 
     params.update(social(request))
+    params.update(contacts(request))
     return render(request, 'main/detail_news.html', params)
 
 
@@ -142,6 +147,7 @@ def get_news(request, pk):
         'article_news': article_news,
     }
     params.update(social(request))
+    params.update(contacts(request))
     return render(request, 'main/detail_news.html', params)
 
 
@@ -153,7 +159,8 @@ def get_history(request, pk):
         'article_history': article_history
     }
     params.update(social(request))
-    print article_history
+    params.update(contacts(request))
+
     return render(request, 'main/detail_news.html', params)
 
 
@@ -164,6 +171,7 @@ def mainconcepts(request):
         'concepts': concepts
     }
     params.update(social(request))
+    params.update(contacts(request))
     return render(request, 'main/concepts.html', params)
 
 
@@ -189,6 +197,7 @@ def our_activities(request):
         'socialp': socialp,
     }
     params.update(social(request))
+    params.update(contacts(request))
     return render(request, 'main/our_activities.html', params)
 
 
@@ -205,7 +214,9 @@ def history(request):
     }
 
     params.update(social(request))
+    params.update(contacts(request))
     return render(request, 'main/histories.html', params)
+
 
 def gallery(request):
     _gallery = Sliders.objects.filter(category__in=Category.objects.filter(title_ru='Видео слайдер')).distinct()
@@ -215,5 +226,16 @@ def gallery(request):
     }
 
     params.update(social(request))
+    params.update(contacts(request))
 
     return render(request, 'main/gallery.html', params)
+
+
+def contacts(request):
+    contact = Contacts.objects.get()
+
+    params = {
+        'contact': contact
+    }
+
+    return params
