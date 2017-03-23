@@ -86,12 +86,14 @@ WSGI_APPLICATION = 'isur.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+import parameters
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'isur',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'NAME': parameters.DB_NAME,
+        'USER': parameters.DB_USER,
+        'PASSWORD': parameters.DB_PASS,
         'PORT': 3306,
         'HOST': '127.0.0.1'
     }
