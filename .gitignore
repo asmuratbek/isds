@@ -1,4 +1,5 @@
 *.pyc
 .idea
 isur/parameters.py
+/static
 
