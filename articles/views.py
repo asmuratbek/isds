@@ -21,7 +21,6 @@ def main(request):
         '-date')[:3]
     publications = Articles.objects.filter(
         article__in=Category.objects.filter(title_ru='Публикации')).distinct().order_by('-date')
-    contacts = Contacts.objects.all()
     reformed_news = format_news_grid(_news)
 
     photo_slide = Sliders.objects.filter(
@@ -31,12 +30,10 @@ def main(request):
     partners = Partners.objects.all()
     contact = Contacts.objects.first()
 
-
     params = {
         'reformed_news': reformed_news,
         'blog': _blog,
         'history': history,
-        'contact': contacts,
         'publications': publications,
         'photo_slider': photo_slide,
         'video_slider': video_slide,
