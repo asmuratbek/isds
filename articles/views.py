@@ -232,7 +232,7 @@ def gallery(request):
 
 
 def contacts(request):
-    contact = Contacts.objects.get()
+    contact = Contacts.objects.first()
 
     params = {
         'contact': contact
