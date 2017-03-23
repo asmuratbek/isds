@@ -14,15 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
 from django.conf.urls.static import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from isur import settings
+from django.contrib import admin
 
 from articles.views import *
+from isur import settings
 
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', admin.site.urls),
     url(r'^fixtures/(?P<name>\w+)$', fixtures, name='fixtures'),
     url(r'^$', main, name='main'),
@@ -36,7 +36,7 @@ urlpatterns = [
     url(r'^history/$', history, name='history'),
     url(r'^history/get/(?P<pk>[0-9]+)$', get_history, name='get_history'),
     url(r'^gallery/$', gallery, name='gallery'),
-    url(r'^publications/$', main , name='publications'),
+    url(r'^publications/$', main, name='publications'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
 ]
