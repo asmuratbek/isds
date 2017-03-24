@@ -6,7 +6,7 @@ from modeltranslation.admin import TabbedTranslationAdmin
 import about.translation
 
 class AboutUSInline(admin.StackedInline):
-    model = Partners
+    model = Partnerss
     extra = 3
 # Register your models here.
 
@@ -28,5 +28,5 @@ class SocialProjectsAdmin(TabbedTranslationAdmin):
     list_display = ('text',)
 
 admin.site.register(AboutUs, AboutUsAdmin)
-admin.site.register(Partners, PartnersAdmin)
+admin.site.register(Partnerss, PartnersAdmin)
 

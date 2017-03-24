@@ -21,7 +21,7 @@ class AboutUs(models.Model):
     partner1 = models.ImageField(upload_to='images/about_us', verbose_name='Лого первого партнера')
     partner2 = models.ImageField(upload_to='images/about_us', verbose_name='Лого второго партнера')
 
-class Partners(models.Model):
+class Partnerss(models.Model):
     class Meta:
         verbose_name = 'Партнер'
         verbose_name_plural = 'Партнер'

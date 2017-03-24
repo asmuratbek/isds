@@ -6,8 +6,8 @@ class AboutUsTranslationOptions(TranslationOptions):
     fields = ('title', 'text', 'our_see', 'mission', 'target1_text', 'target2_text')
 
 
-class PartnersTranslationOptions(TranslationOptions):
+class PartnerssTranslationOptions(TranslationOptions):
     fields = ('title', 'text')
 
 translator.register(AboutUs, AboutUsTranslationOptions)
-translator.register(Partners, PartnersTranslationOptions)
+translator.register(Partnerss, PartnerssTranslationOptions)

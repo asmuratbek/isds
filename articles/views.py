@@ -280,7 +280,7 @@ def send_email(sender, instance, created, **kwargs):
 
 def about_page(request):
     about = AboutUs.objects.first()
-    _partners = Partners.objects.all()
+    _partners = Partnerss.objects.all()
     params = {
         'about': about,
         'apartners': _partners,
