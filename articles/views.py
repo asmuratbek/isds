@@ -1,12 +1,18 @@
 # coding=utf-8
 import datetime
 import random
+import threading
 
+from django.core.mail import EmailMessage
 from django.core.paginator import Paginator
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.http import JsonResponse
+from django.template import loader
 
 from articles.models import *
 from concepts.models import *
+from emails.models import *
 from partners.models import *
 from social.views import *
 
@@ -236,3 +242,37 @@ def contacts(request):
     }
 
     return params
+
+
+def save_user(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        user = Emails(name=name, email=email)
+        user.save()
+
+
+def send_news_email(title, body, to):
+    email = EmailMessage(title, body=body, to=to)
+    email.content_subtype = 'html'
+    email.send()
+
+
+def send_email_in_thread(title, t, c, emails):
+    content = t.render(c)
+    send_news_email(title, body=content,
+                    to=emails)
+
+
+@receiver(post_save, sender=Articles)
+def send_email(sender, instance, created, **kwargs):
+    print instance.article.title
+    if instance.article.title == u'Новости':
+        t = loader.get_template('email.html')
+        emails = [i.email for i in Emails.objects.all()]
+        c = dict(title=instance.title, text=instance.text, date=instance.date)
+        if created:
+            thread = threading.Thread(target=send_email_in_thread,
+                                      args=(instance.title, t, c, emails))
+            thread.start()
+
