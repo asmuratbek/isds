@@ -10,6 +10,7 @@ from django.dispatch import receiver
 from django.http import JsonResponse
 from django.template import loader
 
+from about.models import *
 from articles.models import *
 from concepts.models import *
 from emails.models import *
@@ -276,3 +277,16 @@ def send_email(sender, instance, created, **kwargs):
                                       args=(instance.title, t, c, emails))
             thread.start()
 
+
+def about_page(request):
+    about = AboutUs.objects.first()
+    _partners = Partners.objects.all()
+    params = {
+        'about': about,
+        'apartners': _partners,
+    }
+
+    # params.update(social(request))
+    # params.update(contacts(request))
+
+    return render(request, 'main/about_us.html', params)

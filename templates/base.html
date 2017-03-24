@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load staticfiles %}
+{% get_available_languages as LANGUAGES %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,9 +32,12 @@
 <div class="social_left">
     <ul>
 
-        <a href="www.facebook.com"><li data-hover="false"><img src="{% static 'img/facebook.png' %}" alt=""></li></a>
+        <a href="www.facebook.com">
+            <li data-hover="false"><img src="{% static 'img/facebook.png' %}" alt=""></li>
+        </a>
         <li data-hover="false"><a href="{{ socials.t_link }}"><img src="{% static 'img/twitter.png' %}" alt=""></a></li>
-        <li data-hover="false"><a href="{{ socials.i_link }}"><img src="{% static 'img/instagram.png' %}" alt=""></a></li>
+        <li data-hover="false"><a href="{{ socials.i_link }}"><img src="{% static 'img/instagram.png' %}" alt=""></a>
+        </li>
         <li data-hover="false"><a href="{{ socials.y_link }}"><img src="{% static 'img/youtube.png' %}" alt=""></a></li>
 
     </ul>
@@ -44,48 +48,55 @@
             <div class="col-md-4 col-sm-4 social">
                 <ul class="social_list">
 
-                    <a href="{{ socials.f_link }}"><li class="social_icons facebook"><i class="fa fa-facebook" aria-hidden="true"></i>
-                    </li></a>
-                    <a href="{{ socials.t_link }}"><li class="social_icons twiiter"><i class="fa fa-twitter" aria-hidden="true"></i>
-                    </li></a>
-                    <a href="{{ socials.i_link }}"><li class="social_icons instagram"><i class="fa fa-instagram" aria-hidden="true"></i>
-                    </li></a>
-                    <a href="{{ socials.y_link }}"><li class="social_icons youtube"><i class="fa fa-youtube-play"
-                                                                   aria-hidden="true"></i></li></a>
+                    <a href="{{ socials.f_link }}">
+                        <li class="social_icons facebook"><i class="fa fa-facebook" aria-hidden="true"></i>
+                        </li>
+                    </a>
+                    <a href="{{ socials.t_link }}">
+                        <li class="social_icons twiiter"><i class="fa fa-twitter" aria-hidden="true"></i>
+                        </li>
+                    </a>
+                    <a href="{{ socials.i_link }}">
+                        <li class="social_icons instagram"><i class="fa fa-instagram" aria-hidden="true"></i>
+                        </li>
+                    </a>
+                    <a href="{{ socials.y_link }}">
+                        <li class="social_icons youtube"><i class="fa fa-youtube-play"
+                                                            aria-hidden="true"></i></li>
+                    </a>
 
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-4 logo"><a href="/"><img src="{% static 'img/logo.png' %}" alt=""></a>
             </div>
             <div class="col-xs-4 col-sm-4 col-dm-4 search_div">
-                <div class="col-md-6 col-sm-6 col-xs-6 dropdown language">
-                    <a href="#" class="dropdown-toggle language_select" data-toggle="dropdown"><img src="{%  static 'img/russia.png' %}"
-                                                                                                    alt=""></a>
-                    <ul class="dropdown-menu">
-                        <li class="{% if LANGUAGE_CODE == 'ru' %}active{% endif %}">
-                            <form id='lang_ru' action='/i18n/setlang/' method='POST'>{% csrf_token %}
-                                <input type='hidden' name='language' value='ru'/>
-                                <a href='#' title='RU' onclick="document.getElementById('lang_ru').submit()"><img src="{% static 'img/russia.png' %}" class="russia" alt="">
-                                RU</a>
-                            </form>
-                        </li>
+                <ul class="languages">
+                    <li class="language_select{% if LANGUAGE_CODE == 'ru' %}active{% endif %}">
+                        <form id='lang_ru' action='/i18n/setlang/' method='POST'>{% csrf_token %}
+                            <input type='hidden' name='language' value='ru'/>
+                            <a href='#' title='RU' onclick="document.getElementById('lang_ru').submit()"><img
+                                    src="{% static 'img/russia.png' %}" class="russia" alt="">
+                                </a>
+                        </form>
+                    </li>
 
-                        <li class="{% if LANGUAGE_CODE == 'en' %}active{% endif %}">
-                            <form id='lang_en' action='/i18n/setlang/' method='POST'>{% csrf_token %}
-                                <input type='hidden' name='language' value='en'/>
-                                <a href='#' title='EN' onclick="document.getElementById('lang_en').submit()"><img src="{% static 'img/english.png' %}" alt="">
-                                EN</a>
-                            </form>
-                        </li>
-                        <li class="{% if LANGUAGE_CODE == 'kk' %}active{% endif %}">
-                            <form id='lang_kk' action='/i18n/setlang/' method='POST'>{% csrf_token %}
-                                <input type='hidden' name='language' value='kk'/>
-                                <a href='#' title='KG' onclick="document.getElementById('lang_kk').submit()"><img src="{% static 'img/kg.png' %}" alt="">
-                                KG</a>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="{% if LANGUAGE_CODE == 'en' %}active{% endif %}">
+                        <form id='lang_en' action='/i18n/setlang/' method='POST'>{% csrf_token %}
+                            <input type='hidden' name='language' value='en'/>
+                            <a href='#' title='EN' onclick="document.getElementById('lang_en').submit()"><img
+                                    src="{% static 'img/english.png' %}" alt="">
+                                </a>
+                        </form>
+                    </li>
+                    <li class="{% if LANGUAGE_CODE == 'kk' %}active{% endif %}">
+                        <form id='lang_kk' action='/i18n/setlang/' method='POST'>{% csrf_token %}
+                            <input type='hidden' name='language' value='kk'/>
+                            <a href='#' title='KG' onclick="document.getElementById('lang_kk').submit()"><img
+                                    src="{% static 'img/kg.png' %}" alt="">
+                                </a>
+                        </form>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -104,26 +115,26 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li class="il"><a href="/" class="">Главная</a></li>
+            <li class="il"><a href="/" class="">{% trans 'Главная' %}</a></li>
 
-            <li class="il"><a href="{% url 'about' %}" class="">О нас</a></li>
+            <li class="il"><a href="{% url 'about' %}" class="">{% trans 'О нас' %}</a></li>
 
-            <li class="il"><a href="{% url 'activities' %}" class="">Наша деятельность</a></li>
+            <li class="il"><a href="{% url 'activities' %}" class="">{% trans 'Наша деятельность' %}</a></li>
 
-            <li class="il"><a href="{% url 'concepts' %}" class="">Основные концепции</a></li>
+            <li class="il"><a href="{% url 'concepts' %}" class="">{% trans 'Основные концепции' %}</a></li>
 
-            <li class="il"><a href="{% url 'news' %}" class="">Новости</a></li>
-            <li class="il hover_dropdown">ИСТОРИИ</li>
-            <li class="il hover_dropdown">ГАЛЕРЕЯ</li>
-            <li class="il hover_dropdown">публикации</li>
-            <li class="il hover_dropdown">БЛОГ</li>
+            <li class="il"><a href="{% url 'news' %}" class="">{% trans 'Новости' %}</a></li>
+            <li class="il hover_dropdown">{% trans 'ИСТОРИИ' %}</li>
+            <li class="il hover_dropdown">{% trans 'ГАЛЕРЕЯ' %}</li>
+            <li class="il hover_dropdown">{% trans 'публикации' %}</li>
+            <li class="il hover_dropdown">{% trans 'БЛОГ' %}</li>
 
-            <li class="il last resources_link"><a href="#" class="">Ресурсы</a>
+            <li class="il last resources_link"><a href="#" class="">{% trans 'Ресурсы' %}</a>
                 <ul class="sub_menu">
-                    <li><a href="{% url 'history' %}">ИСТОРИИ</a></li>
-                    <li><a href="{% url 'gallery' %}">ГАЛЕРЕЯ</a></li>
-                    <li><a href="{% url 'publications' %}">публикации</a></li>
-                    <li><a href="{% url 'blog' %}">БЛОГ</a></li>
+                    <li><a href="{% url 'history' %}">{% trans 'ИСТОРИИ' %}</a></li>
+                    <li><a href="{% url 'gallery' %}">{% trans 'ГАЛЕРЕЯ' %}</a></li>
+                    <li><a href="{% url 'publications' %}">{% trans 'публикации' %}</a></li>
+                    <li><a href="{% url 'blog' %}">{% trans 'БЛОГ' %}</a></li>
                 </ul>
             </li>
         </ul>
@@ -137,19 +148,19 @@
 <div class="container-fluid footer">
     <div class="container footer_block">
         <div class="col-md-6 col-sm-6 col-xs-12 footer_columns">
-            <div class="footer_title">Институт Стратегии Устойчивого Развития</div>
+            <div class="footer_title">{% trans 'Институт Стратегии Устойчивого Развития' %}</div>
             <ul class="footer_list">
 
-                <li><a href="/">Главная</a></li>
-                <li><a href="{% url 'about' %}">О нас</a></li>
-                <li><a href="{% url 'activities' %}">Наша деятельность</a></li>
-                <li><a href="{% url 'concepts' %}">Основные концепции</a></li>
-                <li><a href="{% url 'news' %}">Новости</a></li>
+                <li><a href="/">{% trans 'Главная' %}</a></li>
+                <li><a href="{% url 'about' %}">{% trans 'О нас' %}</a></li>
+                <li><a href="{% url 'activities' %}">{% trans 'Наша деятельность' %}</a></li>
+                <li><a href="{% url 'concepts' %}">{% trans 'Основные концепции' %}</a></li>
+                <li><a href="{% url 'news' %}">{% trans 'Новости' %}</a></li>
 
             </ul>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-12 footer_columns">
-            <div class="footer_title">СВЯЗАТЬСЯ С НАМИ</div>
+            <div class="footer_title">{% trans 'СВЯЗАТЬСЯ С НАМИ' %}</div>
             <ul class="footer_list">
 
                 <li class="phone_li"><i class="fa fa-phone footer_icons" aria-hidden="true"></i>{{ contact.phone }}
@@ -157,15 +168,17 @@
 
                 <li class="email_li"><i class="fa fa-envelope-o footer_icons" aria-hidden="true"></i>{{ contact.email }}
                 </li>
-                <li class="mark_li"><a href=""><i class="fa fa-map-marker footer_icons" aria-hidden="true"></i>{{ contact.address }}
+                <li class="mark_li"><a href=""><i class="fa fa-map-marker footer_icons"
+                                                  aria-hidden="true"></i>{{ contact.address }}
                 </a></li>
             </ul>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-12 footer_columns">
-            <div class="footer_title">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</div>
+            <div class="footer_title">{% trans 'МЫ В СОЦИАЛЬНЫХ СЕТЯХ' %}</div>
             <ul class="footer_list footer_social">
 
-                <li><a href="{{ socials.f_link }}"><i class="fa fa-2x fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="{{ socials.f_link }}"><i class="fa fa-2x fa-facebook-square" aria-hidden="true"></i></a>
+                </li>
 
 
                 <li><a href="{{ socials.t_link }}"><i class="fa fa-2x fa-tumblr-square" aria-hidden="true"></i></a></li>
@@ -184,10 +197,10 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
     <script src="{% static 'js/base.js' %}"></script>
-{#    <script src="{% static 'js/gallery.js' %}"></script>#}
+    {#    <script src="{% static 'js/gallery.js' %}"></script>#}
     <script src="{% static 'js/index.js' %}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>#}
+    {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>#}
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
     <script src="https://yastatic.net/share2/share.js" async="async"></script>

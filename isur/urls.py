@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^fixtures/(?P<name>\w+)$', fixtures, name='fixtures'),
     url(r'^$', main, name='main'),
-    url(r'^about-us/$', main, name='about'),
+    url(r'^about-us/$', about_page, name='about'),
     url(r'^activities/$', our_activities, name='activities'),
     url(r'^concepts/$', mainconcepts, name='concepts'),
     url(r'^news/$', news, name='news'),

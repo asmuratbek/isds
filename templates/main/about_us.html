@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n%}
+
+{% block content%}
+<div class="container about_us">
+    <div class="col-md-6 col-sm-6 col-xs-12 about_us_image"><img src="{% static 'img/about_us_image.png' %}" alt=""></div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="section_title default_title">{{ about.title }}</div>
+        <div class="about_us_text"><p>{{ about.text|safe }}</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid our_mission_block">
+    <div class="container our_mission">
+        <div class="col-md-12 col-sm-12 col-xs-12 our_mission_text">
+            <div class="section_title"><span class="news_title">{% trans 'НАШЕ ВИДЕНИЕ' %}</span></div>
+            <p>{{ about.our_see }}</p>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 our_mission_text">
+            <div class="section_title"><span class="news_title">{% trans 'МИССИЯ' %}</span></div>
+            <p>{{ about.mission }}</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid our_aims_block">
+    <div class="container our_aims">
+        <div class="section_title"><span class="news_title">{% trans 'НАШИ ОСНОВЫНЫЕ ЦЕЛИ' %}</span></div>
+        <div class="col-md-6 col-xs-12 col-md-6 our_aims_post no_padding">
+            <div class="col-md-6 col-sm-12 col-xs-12"><img src="{{ about.target1_image.url }}" alt=""></div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="our_aims_text"><p>
+                    {{ about.target1_text|safe }}
+                </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12 col-md-6 our_aims_post no_padding">
+            <div class="col-md-6 col-sm-12 col-xs-12"><img src="{{ about.target2_image.url }}" alt=""></div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="our_aims_text"><p>
+                    {{ about.target2_text|safe }}
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid about_us_partners_block">
+    <div class="container about_us_partners">
+        <div class="section_title">
+            <div class="span news_title">{% trans 'НАШИ ПАРТНЕРЫ' %}</div>
+        </div>
+        <div class="col-md-6 col-sm 6 col-xs-12">
+            <ul class="partners_list">
+                {% for item in apartners %}
+                <li>
+                    {{ item.text }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container-fluid our_donors_block">
+    <div class="container our_donors">
+        <div class="donors_image"><img src="{{ about.partner1.url }}" alt=""></div>
+        <div class="donors_image"><img src="{{ about.partner2.url }}" alt=""></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,20 +1,5 @@
 $(document).ready(function () {
-    var radioButtons = $('.dropdown-menu');
 
-    function resetAllRadioButtons() {
-        $(radioButtons).each(function (i, obj) {
-            var li = $('li', $(obj));
-            $(li).attr('data-value', false);
-        });
-
-    }
-
-    $('.language_list').on('click', function () {
-        resetAllRadioButtons();
-        $(this).attr('data-value', true);
-        var imgsrc = $('img', this).attr('src');
-        $('.language_select img').attr('src', imgsrc);
-    });
     var social_hide_off = $('.isds_navigation').offset().top;
     var isSocialLinksShowen = false;
 

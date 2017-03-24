@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% load staticfiles %}
 
 {% block title %}Главная{% endblock %}
@@ -21,7 +21,7 @@
     {% if reformed_news %}
         <div class="container-fluid news">
             <div class="container novosti">
-                <div class="section_title"><span class="news_title">Новости</span></div>
+                <div class="section_title"><span class="news_title">{% trans 'Новости' %}</span></div>
                 <div class="no_padding news_block">
                     {% for news in reformed_news %}
                         <div class="{{ news.class_name }}">
@@ -34,7 +34,7 @@
 
                                 </div>
                                 <div class="share">
-                                    <a class="share_button"><span class="share_text">Поделиться</span><i
+                                    <a class="share_button"><span class="share_text">{% trans 'Поделиться' %}</span><i
                                             class="fa fa-share"
                                             aria-hidden="true"></i>
                                         <div class="ya-share2"
@@ -45,7 +45,7 @@
                         </div>
                     {% endfor %}
                 </div>
-                <a href="{% url 'news' %}" class="more_news"><span class="more_text">больше новостей</span><i
+                <a href="{% url 'news' %}" class="more_news"><span class="more_text">{% trans 'больше новостей' %}</span><i
                         class="fa fa-arrow-right"
                         aria-hidden="true"></i></a>
             </div>
@@ -72,7 +72,7 @@
         {% endif %}
     </div>
     <div class="container-fluid no_padding">
-        <div class="section_title default_title">Истории</div>
+        <div class="section_title default_title">{% trans 'Истории' %}</div>
         <div class="stories_block">
             <div class="container stories">
                 <div class="stories_wrap">
@@ -85,8 +85,8 @@
                                 <div class="blog_text">{{ stories.text|safe }}
                                 </div>
                                 <div class="no_padding">
-                                    <a class="read" href="{% url 'get_history' pk=stories.id %}">ЧИТАТЬ</a>
-                                    <a class="share_button"><span class="share_text">Поделиться</span><i
+                                    <a class="read" href="{% url 'get_history' pk=stories.id %}">{% trans 'ЧИТАТЬ' %}</a>
+                                    <a class="share_button"><span class="share_text">{% trans 'Поделиться' %}</span><i
                                             class="fa fa-share"
                                             aria-hidden="true"></i>
                                         <div class="ya-share2"
@@ -98,14 +98,14 @@
                         </div>
                     {% endfor %}
                 </div>
-                <a href="{% url 'history' %}" class="more_news"><span class="more_text">просмотреть истории</span><i
+                <a href="{% url 'history' %}" class="more_news"><span class="more_text">{% trans 'просмотреть истории' %}</span><i
                         class="fa fa-arrow-right"
                         aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
     <div class="container_fluid partners_company">
-        <div class="section_title"><span class="news_title">наши партнеры</span></div>
+        <div class="section_title"><span class="news_title">{% trans 'наши партнеры' %}</span></div>
         <div class="container partners">
             {% for partner in partners %}
             <div class="partner"><a href="http://{{ partner.url }}"><img src="{{ partner.image.url }}" alt=""></a></div>
