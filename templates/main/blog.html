@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load i18n %}
 
 {% block content %}
     <div class="container-fluid ">
-        <div class="section_title"><span class="news_title">БЛОГ</span></div>
+        <div class="section_title"><span class="news_title">{% trans 'БЛОГ' %}</span></div>
         <div class="blog resources">
             <div class="container stories">
                 <div class="stories_wrap">
@@ -20,8 +21,8 @@
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12 no_padding">
                                 <div class="col-sm-12 col-md-12 col-xs-12 no_padding">
-                                    <a class="read" href="{% url 'get_blog' pk=blog.id %}">ЧИТАТЬ</a>
-                                    <a class="share_button"><span class="share_text">Поделиться</span><i
+                                    <a class="read" href="{% url 'get_blog' pk=blog.id %}">{% trans 'ЧИТАТЬ' %}</a>
+                                    <a class="share_button"><span class="share_text">{% trans 'Поделиться' %}</span><i
                                             class="fa fa-share"
                                             aria-hidden="true"></i>
                                         <div class="ya-share2"

@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
+{% load i18n %}
 {% block content %}
     <div class="container-fluid no_padding">
-        <div class="section_title default_title">Истории</div>
+        <div class="section_title default_title">{% trans 'Истории' %}</div>
         <div class="stories_block">
             <div class="container stories">
 
@@ -17,8 +17,8 @@
                                 <div class="blog_text">{{ stories.text|safe }}
                                 </div>
                                 <div class="no_padding">
-                                    <a class="read" href="{% url 'get_history' pk=stories.id %}">ЧИТАТЬ</a>
-                                    <a class="share_button"><span class="share_text">Поделиться</span><i
+                                    <a class="read" href="{% url 'get_history' pk=stories.id %}">{% trans 'ЧИТАТЬ' %}</a>
+                                    <a class="share_button"><span class="share_text">{% trans 'Поделиться' %}</span><i
                                             class="fa fa-share"
                                             aria-hidden="true"></i>
                                         <div class="ya-share2"

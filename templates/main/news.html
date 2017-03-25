@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
+{% load i18n %}
 {% block content %}
     {% if reformed_news %}
         <div class="container-fluid news">
             <div class="container novosti">
-                <div class="section_title"><span class="news_title">Новости</span></div>
+                <div class="section_title"><span class="news_title">{% trans 'Новости' %}</span></div>
                 <div class="no_padding news_block">
                     {% for news in pages %}
                         <div class="{{ news.class_name }}">
@@ -20,7 +20,7 @@
 
                                 </div>
                                 <div class="share">
-                                    <a class="share_button"><span class="share_text">Поделиться</span><i
+                                    <a class="share_button"><span class="share_text">{% trans 'Поделиться' %}</span><i
                                             class="fa fa-share"
                                             aria-hidden="true"></i>
                                         <div class="ya-share2"

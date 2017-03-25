@@ -76,3 +76,13 @@ class Contacts(models.Model):
     phone = models.CharField(max_length=300, verbose_name='Телефонный номер')
     email = models.CharField(max_length=300, verbose_name='Е-mail')
     address = models.CharField(max_length=300, verbose_name='Адрес')
+
+class Publications(models.Model):
+    class Meta:
+        verbose_name_plural = 'Публикации'
+        verbose_name = 'Публикация'
+
+    title = models.CharField(max_length=250, verbose_name='Название')
+    text = models.CharField(max_length=300, verbose_name='Текст публикаци')
+    link = models.CharField(max_length=300, verbose_name='Cсылка на публикации', blank=True, null=True)
+    date = models.DateTimeField(auto_now_add=True, null=True)

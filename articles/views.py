@@ -26,8 +26,7 @@ def main(request):
             :3]
     history = Articles.objects.filter(article__in=Category.objects.filter(title_ru='Истории')).distinct().order_by(
         '-date')[:3]
-    publications = Articles.objects.filter(
-        article__in=Category.objects.filter(title_ru='Публикации')).distinct().order_by('-date')
+
     reformed_news = format_news_grid(_news)
 
     photo_slide = Sliders.objects.filter(
@@ -290,3 +289,13 @@ def about_page(request):
     # params.update(contacts(request))
 
     return render(request, 'main/about_us.html', params)
+
+def publications(request):
+    publication = Publications.objects.all().order_by('-date')
+
+
+    params = {
+        'publication': publication,
+    }
+
+    return render(request, 'main/publications.html', params)

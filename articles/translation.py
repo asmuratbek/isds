@@ -26,6 +26,10 @@ class ProgrammsTranslationOptions(TranslationOptions):
 class TourismTranslationOptions(TranslationOptions):
     fields = ('text',)
 
+class PublicationsTranslationOptions(TranslationOptions):
+    fields = ('text',)
+
+
 translator.register(Articles, ArticlesTranslationOptions)
 translator.register(Category, CategoryTranslationOptions)
 translator.register(Sliders, SlidersTranslationOptions)
@@ -33,3 +37,4 @@ translator.register(Contacts, ContactsTranslationOptions)
 translator.register(SocialProjects, SocialProjectsTranslationOptions)
 translator.register(Programms, ProgrammsTranslationOptions)
 translator.register(Tourism, TourismTranslationOptions)
+translator.register(Publications, PublicationsTranslationOptions)

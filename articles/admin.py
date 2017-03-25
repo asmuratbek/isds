@@ -30,6 +30,11 @@ class TourismAdmin(TabbedTranslationAdmin):
 class SocialProjectsAdmin(TabbedTranslationAdmin):
     list_display = ('text',)
 
+class PublicationsAdmin(TabbedTranslationAdmin):
+    fields = ('title', 'text', 'link')
+    list_display = ('title', 'text', 'link',)
+
+
 admin.site.register(Articles, ArticlesAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Sliders, SlidersAdmin)
@@ -37,3 +42,4 @@ admin.site.register(Contacts, ContactsAdmin)
 admin.site.register(Programms, ProgrammsAdmin)
 admin.site.register(SocialProjects, SocialProjectsAdmin)
 admin.site.register(Tourism, TourismAdmin)
+admin.site.register(Publications, PublicationsAdmin)
