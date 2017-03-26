@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-26 23:44+0600\n"
+"POT-Creation-Date: 2017-03-27 00:59+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: articles/views.py:255
+msgid "Вы успешно подписаны!"
+msgstr "You are successfully subscribed!"
 
 #: templates/base.html:118 templates/base.html:154
 msgid "Главная"
@@ -87,12 +91,12 @@ msgid "НАШИ ПАРТНЕРЫ"
 msgstr "OUR PARTNERS"
 
 #: templates/main/blog.html:24 templates/main/histories.html:20
-#: templates/main/index.html:88
+#: templates/main/index.html:90
 msgid "ЧИТАТЬ"
 msgstr "READ MORE"
 
 #: templates/main/blog.html:25 templates/main/histories.html:21
-#: templates/main/index.html:37 templates/main/index.html:89
+#: templates/main/index.html:37 templates/main/index.html:91
 #: templates/main/news.html:23
 msgid "Поделиться"
 msgstr "Share"
@@ -109,39 +113,39 @@ msgstr "changing of climate"
 msgid "устойчивое развитие"
 msgstr "sustainable development"
 
-#: templates/main/histories.html:6 templates/main/index.html:75
+#: templates/main/histories.html:6 templates/main/index.html:76
 msgid "Истории"
 msgstr "Histories"
 
-#: templates/main/index.html:48
+#: templates/main/index.html:49
 msgid "больше новостей"
 msgstr "more news"
 
-#: templates/main/index.html:101
+#: templates/main/index.html:104
 msgid "просмотреть истории"
 msgstr "more histories"
 
-#: templates/main/index.html:108
+#: templates/main/index.html:111
 msgid "наши партнеры"
 msgstr "our partners"
 
-#: templates/main/index.html:118
+#: templates/main/index.html:122
 msgid "БУДЬТЕ В КРУСЕ СОБЫТИЙ"
 msgstr "BE IN TOUCHE"
 
-#: templates/main/index.html:119
+#: templates/main/index.html:123
 msgid "ПОДПИШИТЕСЬ НА РАССЫЛКУ"
 msgstr "SUBSCRIBE ON NEWS"
 
-#: templates/main/index.html:122
+#: templates/main/index.html:127
 msgid "Имя"
 msgstr "Name"
 
-#: templates/main/index.html:123
+#: templates/main/index.html:128
 msgid "E-mail"
 msgstr "E-mail"
 
-#: templates/main/index.html:124
+#: templates/main/index.html:129
 msgid "ОТПРАВИТЬ"
 msgstr "SUBSCRIBE"
 
