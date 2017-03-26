@@ -37,6 +37,7 @@ urlpatterns = [
     url(r'^history/get/(?P<pk>[0-9]+)$', get_history, name='get_history'),
     url(r'^gallery/$', gallery, name='gallery'),
     url(r'^publications/$', publications, name='publications'),
+    url(r'^save-user/$', save_user, name='save_user'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
 ]

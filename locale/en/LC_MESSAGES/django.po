@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-25 15:28+0600\n"
+"POT-Creation-Date: 2017-03-26 23:44+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -124,6 +124,26 @@ msgstr "more histories"
 #: templates/main/index.html:108
 msgid "наши партнеры"
 msgstr "our partners"
+
+#: templates/main/index.html:118
+msgid "БУДЬТЕ В КРУСЕ СОБЫТИЙ"
+msgstr "BE IN TOUCHE"
+
+#: templates/main/index.html:119
+msgid "ПОДПИШИТЕСЬ НА РАССЫЛКУ"
+msgstr "SUBSCRIBE ON NEWS"
+
+#: templates/main/index.html:122
+msgid "Имя"
+msgstr "Name"
+
+#: templates/main/index.html:123
+msgid "E-mail"
+msgstr "E-mail"
+
+#: templates/main/index.html:124
+msgid "ОТПРАВИТЬ"
+msgstr "SUBSCRIBE"
 
 #: templates/main/our_activities.html:7
 msgid "Программы"

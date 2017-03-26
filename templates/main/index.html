@@ -45,7 +45,8 @@
                         </div>
                     {% endfor %}
                 </div>
-                <a href="{% url 'news' %}" class="more_news"><span class="more_text">{% trans 'больше новостей' %}</span><i
+                <a href="{% url 'news' %}" class="more_news"><span
+                        class="more_text">{% trans 'больше новостей' %}</span><i
                         class="fa fa-arrow-right"
                         aria-hidden="true"></i></a>
             </div>
@@ -85,7 +86,8 @@
                                 <div class="blog_text">{{ stories.text|safe }}
                                 </div>
                                 <div class="no_padding">
-                                    <a class="read" href="{% url 'get_history' pk=stories.id %}">{% trans 'ЧИТАТЬ' %}</a>
+                                    <a class="read"
+                                       href="{% url 'get_history' pk=stories.id %}">{% trans 'ЧИТАТЬ' %}</a>
                                     <a class="share_button"><span class="share_text">{% trans 'Поделиться' %}</span><i
                                             class="fa fa-share"
                                             aria-hidden="true"></i>
@@ -98,7 +100,8 @@
                         </div>
                     {% endfor %}
                 </div>
-                <a href="{% url 'history' %}" class="more_news"><span class="more_text">{% trans 'просмотреть истории' %}</span><i
+                <a href="{% url 'history' %}" class="more_news"><span
+                        class="more_text">{% trans 'просмотреть истории' %}</span><i
                         class="fa fa-arrow-right"
                         aria-hidden="true"></i></a>
             </div>
@@ -108,13 +111,46 @@
         <div class="section_title"><span class="news_title">{% trans 'наши партнеры' %}</span></div>
         <div class="container partners">
             {% for partner in partners %}
-            <div class="partner"><a href="http://{{ partner.url }}"><img src="{{ partner.image.url }}" alt=""></a></div>
+                <div class="partner"><a href="http://{{ partner.url }}"><img src="{{ partner.image.url }}" alt=""></a>
+                </div>
             {% endfor %}
         </div>
     </div>
+
+    <div class="container-fluid subscribe">
+        <div class="container subscribe_form">
+            <div class="section_title title_style">{% trans 'БУДЬТЕ В КРУСЕ СОБЫТИЙ' %}</div>
+            <p class="sub_title">{% trans 'ПОДПИШИТЕСЬ НА РАССЫЛКУ' %}</p>
+            <div class="section_title"><span class="describe_title"></span></div>
+            <form class="user_info" action="{% url 'save_user' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder="{% trans 'Имя' %}" name="name">
+                <input type="email" placeholder="{% trans 'E-mail' %}" name="email">
+                <button class="read confirm" type="submit">{% trans 'ОТПРАВИТЬ' %}</button>
+            </form>
+        </div>
+    </div>
+
 
 {% endblock %}
 
 {% block javascripts %}
     {{ block.super }}
+
+    <script>
+        var form = $('.user_info');
+        $(function () {
+            $(form).on('submit', function (e) {
+                e.preventDefault();
+                $.ajax({
+                    data: $('form').serialize(),
+                    url: $(form).attr('action'),
+                    method: 'POST',
+                    success: function (res) {
+                        alert(res)
+                    }
+                });
+            })
+        });
+    </script>
 {% endblock %}

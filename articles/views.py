@@ -7,6 +7,7 @@ from django.core.mail import EmailMessage
 from django.core.paginator import Paginator
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.http import HttpResponse
 from django.http import JsonResponse
 from django.template import loader
 
@@ -250,7 +251,7 @@ def save_user(request):
         email = request.POST.get('email')
         user = Emails(name=name, email=email)
         user.save()
-
+    return HttpResponse("Вы успешно подписаны!")
 
 def send_news_email(title, body, to):
     email = EmailMessage(title, body=body, to=to)

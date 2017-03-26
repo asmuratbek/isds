@@ -169,5 +169,5 @@ CKEDITOR_CONFIGS = {
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'  # Например, smtp.gmail.com
-EMAIL_HOST_USER = 'googmstudio@gmail.com'
-EMAIL_HOST_PASSWORD = "Aksaka1zakompom  "
+EMAIL_HOST_USER = 'asmnotifications@gmail.com'
+EMAIL_HOST_PASSWORD = "amanatay123"
