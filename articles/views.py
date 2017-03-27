@@ -190,7 +190,7 @@ def our_activities(request):
     results = Programms.objects.filter(
         category__in=Category.objects.filter(title_ru='ОР')).distinct()
 
-    tourism = Tourism.objects.get()
+    tourism = Tourism.objects.first()
     socialp = SocialProjects.objects.all()
 
     params = {
