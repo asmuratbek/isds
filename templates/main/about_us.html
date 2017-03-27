@@ -51,16 +51,26 @@
         <div class="section_title">
             <div class="span news_title">{% trans 'НАШИ ПАРТНЕРЫ' %}</div>
         </div>
+
         <div class="col-md-6 col-sm 6 col-xs-12">
             <ul class="partners_list">
-                {% for item in apartners %}
+                 {% for item in apartners|slice:"0:5" %}
                 <li>
                     {{ item.text }}
                 </li>
                 {% endfor %}
             </ul>
         </div>
-    </div>
+        <div class="col-md-6 col-sm 6 col-xs-12">
+            <ul class="partners_list">
+                 {% for item in apartners|slice:"6:10" %}
+                <li>
+                    {{ item.text }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
 </div>
 <div class="container-fluid our_donors_block">
     <div class="container our_donors">
