@@ -170,7 +170,7 @@ def get_history(request, pk):
 
 
 def mainconcepts(request):
-    concepts = MainConcepts.objects.get()
+    concepts = MainConcepts.objects.first()
 
     params = {
         'concepts': concepts
