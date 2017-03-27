@@ -272,8 +272,7 @@ def send_email(sender, instance, created, **kwargs):
     if instance.article.title == u'Новости':
         t = loader.get_template('email.html')
         emails = [i.email for i in Emails.objects.all()]
-        c = dict(title=instance.title, text=instance.text, date=instance.date)
-        c = c.encode('utf-8')
+        c = dict(title=instance.title, text=instance.text, date=instance.date).encode('utf-8')
         if created:
             thread = threading.Thread(target=send_email_in_thread,
                                       args=(instance.title, t, c, emails))
