@@ -155,6 +155,7 @@ STATICFILES_DIRS = (
     os.path.join(os.path.dirname(BASE_DIR), 'isur', 'templates', 'public'),
 )
 
+JET_SIDE_MENU_COMPACT = True
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_IMAGE_BACKEND = 'Pillow'
