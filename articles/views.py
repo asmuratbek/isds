@@ -287,8 +287,8 @@ def about_page(request):
         'apartners': _partners,
     }
 
-    # params.update(social(request))
-    # params.update(contacts(request))
+    params.update(social(request))
+    params.update(contacts(request))
 
     return render(request, 'main/about_us.html', params)
 
