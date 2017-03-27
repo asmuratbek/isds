@@ -13,7 +13,7 @@
                                 <div class="post_image"><img src="{{ news.image.url }}" alt=""></div>
                                 <div class="news_post_text">
                                     <div class="title">
-                                        <a href="{% url 'get_news' pk=news.id %}">{{ news.title }}</a>
+                                        <a href="{% url 'get_news' pk=news.id %}" style="color: #4db277">{{ news.title }}</a>
                                     </div>
                                     <div class="date no_padding">{{ news.date|date:"d.m.y" }}</div>
                                     <div class="news_text">{{ news.text|safe }}</div>
