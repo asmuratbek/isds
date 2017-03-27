@@ -224,7 +224,7 @@ def history(request):
 
 
 def gallery(request):
-    _gallery = Sliders.objects.filter(category__in=Category.objects.filter(title_ru='Видео слайдер')).distinct()
+    _gallery = Sliders.objects.filter(category__in=Category.objects.filter(title_ru='Фото слайдер')).distinct()
 
     params = {
         'gallery': _gallery,
