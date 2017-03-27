@@ -268,7 +268,7 @@ def send_email_in_thread(title, t, c, emails):
 
 @receiver(post_save, sender=Articles)
 def send_email(sender, instance, created, **kwargs):
-    print instance.article.title
+
     if instance.article.title == u'Новости':
         t = loader.get_template('email.html')
         emails = [i.email for i in Emails.objects.all()]
