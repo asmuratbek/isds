@@ -4,11 +4,19 @@
 {% block content %}
 <div class="container-fluid news">
     <div class="container novosti">
-        <div class="col-md-6 col-sm6 col-xs-12"><img src="{{ article_news.image.url }}{{ article_blog.image.url }}" alt=""></div>
+        <div class="col-md-6 col-sm6 col-xs-12"><img src="
+        {{ article_news.image.url }}
+        {{ article_blog.image.url }}
+        {{ article_history.image.url }}" alt=""></div>
         <div class="col-md-6 col-sm6 col-xs-12">
-            <div class="title_section">{{ article_news.title }}{{ article_blog.title }}
+            <div class="title_section">
+                {{ article_news.title }}
+                {{ article_blog.title }}
+                {{ article_history.title }}
             </div>
-            {{ article_news.text|safe }}{{ article_blog.text|safe }}
+            {{ article_news.text|safe }}
+            {{ article_blog.text|safe }}
+            {{ article_history.text|safe }}
         </div>
     </div>
 </div>
