@@ -252,7 +252,7 @@ def save_user(request):
         email = request.POST.get('email')
         user = Emails(name=name, email=email)
         user.save()
-    return HttpResponse(_("Вы успешно подписаны!"))
+    return HttpResponse("Вы успешно подписаны!")
 
 def send_news_email(title, body, to):
     email = EmailMessage(title, body=body, to=to)
