@@ -1,6 +1,5 @@
 *.pyc
 .idea
 isur/parameters.py
-/static
-
+static/media
 
