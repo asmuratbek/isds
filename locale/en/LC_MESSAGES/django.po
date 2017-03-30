@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-27 10:40+0600\n"
+"POT-Creation-Date: 2017-03-30 13:06+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,8 +59,10 @@ msgid "Ресурсы"
 msgstr "Resources"
 
 #: templates/base.html:151
-msgid "Институт Стратегии Устойчивого Развития"
-msgstr "Institute for Sustainable Development Strategy"
+#, fuzzy
+#| msgid "Институт Стратегии Устойчивого Развития"
+msgid " ОФ \"Институт Стратегии Устойчивого Развития\" "
+msgstr " PF \"Institute for Sustainable Development Strategy\" "
 
 #: templates/base.html:163
 msgid "СВЯЗАТЬСЯ С НАМИ"
@@ -70,29 +72,29 @@ msgstr "CONTACT US"
 msgid "МЫ В СОЦИАЛЬНЫХ СЕТЯХ"
 msgstr "WE ARE IN SOCIAL"
 
-#: templates/main/about_us.html:17
+#: templates/main/about_us.html:18
 msgid "НАШЕ ВИДЕНИЕ"
 msgstr "OUR VISION"
 
-#: templates/main/about_us.html:21
+#: templates/main/about_us.html:22
 msgid "МИССИЯ"
 msgstr "MISSION"
 
-#: templates/main/about_us.html:28
+#: templates/main/about_us.html:29
 msgid "НАШИ ОСНОВЫНЫЕ ЦЕЛИ"
 msgstr "OUR MAIN TARGET"
 
-#: templates/main/about_us.html:52
+#: templates/main/about_us.html:53
 msgid "НАШИ ПАРТНЕРЫ"
 msgstr "OUR PARTNERS"
 
 #: templates/main/blog.html:24 templates/main/histories.html:20
-#: templates/main/index.html:90
+#: templates/main/index.html:92
 msgid "ЧИТАТЬ"
 msgstr "READ MORE"
 
 #: templates/main/blog.html:25 templates/main/histories.html:21
-#: templates/main/index.html:37 templates/main/index.html:91
+#: templates/main/index.html:39 templates/main/index.html:93
 #: templates/main/news.html:23
 msgid "Поделиться"
 msgstr "Share"
@@ -109,39 +111,39 @@ msgstr "changing of climate"
 msgid "устойчивое развитие"
 msgstr "sustainable development"
 
-#: templates/main/histories.html:6 templates/main/index.html:76
+#: templates/main/histories.html:6 templates/main/index.html:78
 msgid "Истории"
 msgstr "Histories"
 
-#: templates/main/index.html:49
+#: templates/main/index.html:51
 msgid "больше новостей"
 msgstr "more news"
 
-#: templates/main/index.html:104
+#: templates/main/index.html:106
 msgid "просмотреть истории"
 msgstr "more histories"
 
-#: templates/main/index.html:111
+#: templates/main/index.html:113
 msgid "наши партнеры"
 msgstr "our partners"
 
-#: templates/main/index.html:122
+#: templates/main/index.html:124
 msgid "БУДЬТЕ В КРУСЕ СОБЫТИЙ"
 msgstr "BE IN TOUCHE"
 
-#: templates/main/index.html:123
+#: templates/main/index.html:125
 msgid "ПОДПИШИТЕСЬ НА РАССЫЛКУ"
 msgstr "SUBSCRIBE ON NEWS"
 
-#: templates/main/index.html:127
+#: templates/main/index.html:129
 msgid "Имя"
 msgstr "Name"
 
-#: templates/main/index.html:128
+#: templates/main/index.html:130
 msgid "E-mail"
 msgstr "E-mail"
 
-#: templates/main/index.html:129
+#: templates/main/index.html:131
 msgid "ОТПРАВИТЬ"
 msgstr "SUBSCRIBE"
 
