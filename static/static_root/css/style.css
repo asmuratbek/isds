@@ -482,6 +482,7 @@ body {
     margin-top: 30px;
 }
 
+
 .news_title {
     top:15px;
     position: relative;
@@ -631,8 +632,11 @@ body {
     padding-bottom: 15px;
     margin-bottom: 15px;
     position: relative;
+    margin: 22px 0 0 0;
 }
-
+.col-md-12 p{
+    margin: 22px 0 0 0 !important;
+}
 .title_section:after {
     position: absolute;
     content: '';

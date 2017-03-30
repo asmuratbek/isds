@@ -71,6 +71,14 @@
             </div>
             <div class="col-xs-4 col-sm-4 col-dm-4 search_div">
                 <ul class="languages">
+                    <li class="{% if LANGUAGE_CODE == 'kk' %}active{% endif %}">
+                        <form id='lang_kk' action='/i18n/setlang/' method='POST'>{% csrf_token %}
+                            <input type='hidden' name='language' value='kk'/>
+                            <a href='#' title='KG' onclick="document.getElementById('lang_kk').submit()"><img
+                                    src="{% static 'img/kg.png' %}" alt="">
+                                </a>
+                        </form>
+                    </li>
                     <li class="language_select{% if LANGUAGE_CODE == 'ru' %}active{% endif %}">
                         <form id='lang_ru' action='/i18n/setlang/' method='POST'>{% csrf_token %}
                             <input type='hidden' name='language' value='ru'/>
@@ -85,14 +93,6 @@
                             <input type='hidden' name='language' value='en'/>
                             <a href='#' title='EN' onclick="document.getElementById('lang_en').submit()"><img
                                     src="{% static 'img/english.png' %}" alt="">
-                                </a>
-                        </form>
-                    </li>
-                    <li class="{% if LANGUAGE_CODE == 'kk' %}active{% endif %}">
-                        <form id='lang_kk' action='/i18n/setlang/' method='POST'>{% csrf_token %}
-                            <input type='hidden' name='language' value='kk'/>
-                            <a href='#' title='KG' onclick="document.getElementById('lang_kk').submit()"><img
-                                    src="{% static 'img/kg.png' %}" alt="">
                                 </a>
                         </form>
                     </li>
