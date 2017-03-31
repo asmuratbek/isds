@@ -3,7 +3,6 @@ import datetime
 import random
 import threading
 
-from django.utils.translation import ugettext_lazy as _
 from django.core.mail import EmailMessage
 from django.core.paginator import Paginator
 from django.db.models.signals import post_save
@@ -35,6 +34,7 @@ def main(request):
         category__in=Category.objects.filter(title_ru='Фото слайдер')).distinct()
     video_slide = Sliders.objects.filter(category__in=Category.objects.filter(title_ru='Видео слайдер')).distinct()
     main_slide = Sliders.objects.filter(category__in=Category.objects.filter(title_ru='Главныйс')).distinct()
+    slider_mask = SliderMask.objects.first()
     partners = Partners.objects.all()
     contact = Contacts.objects.first()
 
@@ -46,11 +46,14 @@ def main(request):
         'photo_slider': photo_slide,
         'video_slider': video_slide,
         'main_slider': main_slide,
+        'mask': slider_mask,
         'partners': partners,
         'contact': contact,
     }
 
     params.update(social(request))
+    params.update(logos(request))
+
 
     # print reformed_news
     # return JsonResponse(dict(objects=reformed_news))
@@ -88,6 +91,8 @@ def news(request):
 
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
+
     return render(request, 'main/news.html', params)
 
 
@@ -103,6 +108,8 @@ def blog(request):
     }
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
+
     return render(request, 'main/blog.html', params)
 
 
@@ -142,6 +149,8 @@ def get_blog(request, pk):
 
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
+
     return render(request, 'main/detail_news.html', params)
 
 
@@ -153,6 +162,8 @@ def get_news(request, pk):
     }
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
+
     return render(request, 'main/detail_news.html', params)
 
 
@@ -165,6 +176,7 @@ def get_history(request, pk):
     }
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
 
     return render(request, 'main/detail_news.html', params)
 
@@ -177,18 +189,16 @@ def mainconcepts(request):
     }
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
+
     return render(request, 'main/concepts.html', params)
 
 
 def our_activities(request):
     local = Programms.objects.filter(
-        category__in=Category.objects.filter(title_ru='МИПБ')).distinct()
+        category__in=Category.objects.filter(title_ru='ПБР')).distinct()
     regional = Programms.objects.filter(
         category__in=Category.objects.filter(title_ru='РП')).distinct()
-    main = Programms.objects.filter(
-        category__in=Category.objects.filter(title_ru='ОМР')).distinct()
-    results = Programms.objects.filter(
-        category__in=Category.objects.filter(title_ru='ОР')).distinct()
 
     tourism = Tourism.objects.first()
     socialp = SocialProjects.objects.all()
@@ -196,13 +206,13 @@ def our_activities(request):
     params = {
         'local': local,
         'regional': regional,
-        'main': main,
-        'results': results,
         'tourism': tourism,
         'socialp': socialp,
     }
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
+
     return render(request, 'main/our_activities.html', params)
 
 
@@ -220,6 +230,8 @@ def history(request):
 
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
+
     return render(request, 'main/histories.html', params)
 
 
@@ -232,6 +244,7 @@ def gallery(request):
 
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
 
     return render(request, 'main/gallery.html', params)
 
@@ -254,6 +267,7 @@ def save_user(request):
         user.save()
     return HttpResponse("Вы успешно подписаны!")
 
+
 def send_news_email(title, body, to):
     email = EmailMessage(title, body=body, to=to)
     email.content_subtype = 'html'
@@ -268,7 +282,6 @@ def send_email_in_thread(title, t, c, emails):
 
 @receiver(post_save, sender=Articles)
 def send_email(sender, instance, created, **kwargs):
-
     if instance.article.title == u'Новости':
         t = loader.get_template('email.html')
         emails = [i.email for i in Emails.objects.all()]
@@ -289,15 +302,43 @@ def about_page(request):
 
     params.update(social(request))
     params.update(contacts(request))
+    params.update(logos(request))
+
 
     return render(request, 'main/about_us.html', params)
 
+
 def publications(request):
     publication = Publications.objects.all().order_by('-date')
-
 
     params = {
         'publication': publication,
     }
 
+    params.update(social(request))
+    params.update(contacts(request))
+    params.update(logos(request))
+
     return render(request, 'main/publications.html', params)
+
+
+def get_publications(request, pk):
+    _publication = Publications.objects.filter(id=pk).first()
+
+    params = {
+
+        'get_publication': _publication,
+
+    }
+
+    params.update(social(request))
+    params.update(contacts(request))
+    params.update(logos(request))
+    return render(request, 'main/detail_news.html', params)
+
+def logos(request):
+    logo = Logo.objects.first()
+    params = {
+        'logo': logo
+    }
+    return params

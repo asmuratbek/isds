@@ -1,3 +1,7 @@
+function ResizeHeight() {
+    var height =$('.bio_concepts').height();
+    $('.bio_concepts_after').height(height);
+}
 $(document).ready(function () {
 
     var social_hide_off = $('.isds_navigation').offset().top;
@@ -68,4 +72,10 @@ $(document).ready(function () {
         }
 
     });
+    ResizeHeight();
+
+
 });
+$(window).resize(function () {
+    ResizeHeight();
+})

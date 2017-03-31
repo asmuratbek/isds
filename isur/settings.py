@@ -33,8 +33,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'jet',
-    'adminsortable2',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'concepts',
     'ckeditor',
     'ckeditor_uploader',
-    'modeltranslation',
+    'adminsortable2',
+
 
 
 ]

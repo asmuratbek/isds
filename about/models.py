@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+
 # Create your models here.
 
 class AboutUs(models.Model):
@@ -11,8 +12,11 @@ class AboutUs(models.Model):
         verbose_name_plural = 'О нас'
 
     title = models.CharField(max_length=255, verbose_name='По умолчанию введите о нас')
+    image = models.ImageField(upload_to='images/about_us', verbose_name='Изображение для блока о нас')
     text = models.TextField(verbose_name='Текст для о нас')
+    our_see_image = models.ImageField(upload_to='images/about_us', verbose_name='Изображение для нашего виденья')
     our_see = models.TextField(verbose_name='Текст для наше виденье')
+    mission_image = models.ImageField(upload_to='images/about_us', verbose_name='Изображения для нашей миссии')
     mission = models.TextField(verbose_name='Текст для наша миссия')
     target1_image = models.ImageField(upload_to='images/about_us', verbose_name='Изображение для левого блока')
     target1_text = models.TextField(verbose_name='Текс для левого блока')
@@ -20,6 +24,7 @@ class AboutUs(models.Model):
     target2_text = models.TextField(verbose_name='Текс для правого блока')
     partner1 = models.ImageField(upload_to='images/about_us', verbose_name='Лого первого партнера')
     partner2 = models.ImageField(upload_to='images/about_us', verbose_name='Лого второго партнера')
+
 
 class Partnerss(models.Model):
     class Meta:

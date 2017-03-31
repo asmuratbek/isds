@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="container about_us">
-        <div class="col-md-6 col-sm-6 col-xs-12 about_us_image"><img src="{% static 'img/about_us_image.png' %}" alt="">
+        <div class="col-md-6 col-sm-6 col-xs-12 about_us_image"><img src="{{ about.image.url }}" alt="">
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="section_title default_title">{{ about.title }}</div>
@@ -16,17 +16,19 @@
         <div class="container our_mission">
             <div class="col-md-12 col-sm-12 col-xs-12 our_mission_text">
                 <div class="section_title"><span class="news_title">{% trans 'НАШЕ ВИДЕНИЕ' %}</span></div>
+                <div class="col-md-6"><img src="{{ about.our_see_image.url }}" alt=""></div>
                 <p>{{ about.our_see }}</p>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12 our_mission_text">
                 <div class="section_title"><span class="news_title">{% trans 'МИССИЯ' %}</span></div>
+                <div class="col-md-6"><img src="{{ about.mission_image.url }}" alt=""></div>
                 <p>{{ about.mission }}</p>
             </div>
         </div>
     </div>
     <div class="container-fluid our_aims_block">
         <div class="container our_aims">
-            <div class="section_title"><span class="news_title">{% trans 'НАШИ ОСНОВЫНЫЕ ЦЕЛИ' %}</span></div>
+            <div class="section_title"><span class="news_title">{% trans 'ОСНОВНЫЕ ЦЕЛИ' %}</span></div>
             <div class="col-md-6 col-xs-12 col-md-6 our_aims_post no_padding">
                 <div class="col-md-6 col-sm-12 col-xs-12"><img src="{{ about.target1_image.url }}" alt=""></div>
                 <div class="col-md-6 col-sm-12 col-xs-12">

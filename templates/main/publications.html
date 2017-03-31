@@ -6,14 +6,12 @@
     <div class="container-fluid">
     <div class="cotainer publications">
         <div class="section_title default_title">{% trans 'Публикации' %}</div>
-        <ul class="publications_list">
+        <div class="publications_wrap">
             {% for i in publication %}
-            <li><a href="{{ i.link }}">
-            {{ i.text }}
-            </a></li>
+            <div class="col-md-3 col-sm-3 col-xs-12 col-lg-3 publications_post"><div class="publications_image"><a href=""><img src="{{ i.image.url }}" alt=""></a></div><div class="publications_link">
+                <a href="{% url 'get_publication' pk=i.id%}">{{ i.title }}</a></div></div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 </div>
-
 {% endblock %}

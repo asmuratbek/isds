@@ -8,7 +8,7 @@ import concepts.translation
 
 class MainConceptsAdmin(TabbedTranslationAdmin):
     list_display = ('title',)
-    fields = ('bio', 'climate', 'development', 'slow_food_image', 'slow_food_text')
+    fields = ('bio', 'climate_image', 'climate', 'development_image', 'development', 'slow_food_image', 'slow_food_text')
 
 
 admin.site.register(MainConcepts, MainConceptsAdmin)

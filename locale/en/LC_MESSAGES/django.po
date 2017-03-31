@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-30 13:06+0600\n"
+"POT-Creation-Date: 2017-03-31 18:01+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,8 +59,6 @@ msgid "Ресурсы"
 msgstr "Resources"
 
 #: templates/base.html:151
-#, fuzzy
-#| msgid "Институт Стратегии Устойчивого Развития"
 msgid " ОФ \"Институт Стратегии Устойчивого Развития\" "
 msgstr " PF \"Institute for Sustainable Development Strategy\" "
 
@@ -76,15 +74,15 @@ msgstr "WE ARE IN SOCIAL"
 msgid "НАШЕ ВИДЕНИЕ"
 msgstr "OUR VISION"
 
-#: templates/main/about_us.html:22
+#: templates/main/about_us.html:23
 msgid "МИССИЯ"
-msgstr "MISSION"
+msgstr "our MISSION"
 
-#: templates/main/about_us.html:29
-msgid "НАШИ ОСНОВЫНЫЕ ЦЕЛИ"
-msgstr "OUR MAIN TARGET"
+#: templates/main/about_us.html:31
+msgid "ОСНОВНЫЕ ЦЕЛИ"
+msgstr "MAIN GOALS"
 
-#: templates/main/about_us.html:53
+#: templates/main/about_us.html:55
 msgid "НАШИ ПАРТНЕРЫ"
 msgstr "OUR PARTNERS"
 
@@ -100,20 +98,24 @@ msgid "Поделиться"
 msgstr "Share"
 
 #: templates/main/concepts.html:11
-msgid "Биокультаурное разнообразие"
+msgid "Биокультурное разнообразие"
 msgstr "Biocultural diversity "
 
-#: templates/main/concepts.html:20
+#: templates/main/concepts.html:21
 msgid "изменение климата"
-msgstr "changing of climate"
+msgstr "Climate change"
 
-#: templates/main/concepts.html:26
+#: templates/main/concepts.html:30
 msgid "устойчивое развитие"
 msgstr "sustainable development"
 
+#: templates/main/concepts.html:45
+msgid "Слоу Фуд"
+msgstr "Slow food"
+
 #: templates/main/histories.html:6 templates/main/index.html:78
 msgid "Истории"
-msgstr "Histories"
+msgstr "Stories"
 
 #: templates/main/index.html:51
 msgid "больше новостей"
@@ -152,34 +154,21 @@ msgid "Программы"
 msgstr "Programs"
 
 #: templates/main/our_activities.html:12
-msgid "Местные инициативы по БКР:"
-msgstr "Local initiatives"
+msgid "Продвижение биокультурного разнообразия"
+msgstr "Promoting biocultural diversity"
 
 #: templates/main/our_activities.html:22
 msgid "Региональные поездки"
-msgstr "Regional trips"
+msgstr "Regional travels"
 
-#: templates/main/our_activities.html:37
-#, fuzzy
-#| msgid "Основные концепции"
-msgid "Основные результаты"
-msgstr "Main concepts"
+#: templates/main/our_activities.html:40
+msgid "Устойчивые местные сообщества"
+msgstr "Sustainable communities"
 
 #: templates/main/our_activities.html:50
-msgid "Основные мероприятия и результаты (2014-2015)"
-msgstr "Main events and results (2014-2015)"
-
-#: templates/main/our_activities.html:67
-msgid "устойчивый туризм"
-msgstr "stable tourism"
-
-#: templates/main/our_activities.html:75
 msgid "социальные проекты"
 msgstr "social projects"
 
 #: templates/main/publications.html:8
 msgid "Публикации"
 msgstr "Publications"
-
-#~ msgid "Вы успешно подписаны!"
-#~ msgstr "You are successfully subscribed!"

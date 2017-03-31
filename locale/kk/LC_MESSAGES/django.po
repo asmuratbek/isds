@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-30 13:06+0600\n"
+"POT-Creation-Date: 2017-03-31 18:01+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: templates/base.html:118 templates/base.html:154
 msgid "Главная"
-msgstr "Башкы бет"
+msgstr "Башкы"
 
 #: templates/base.html:120 templates/base.html:155
 msgid "О нас"
-msgstr "Биз жонундо"
+msgstr "Биз жөнүндө"
 
 #: templates/base.html:122 templates/base.html:156
 msgid "Наша деятельность"
@@ -37,11 +37,11 @@ msgstr "Негизги концепциялар"
 #: templates/base.html:126 templates/base.html:158 templates/main/index.html:24
 #: templates/main/news.html:8
 msgid "Новости"
-msgstr "Жанылыктар"
+msgstr "Жаңылыктар"
 
 #: templates/base.html:127 templates/base.html:134
 msgid "ИСТОРИИ"
-msgstr "Тарыхтарыбыз"
+msgstr "АҢГЕМЕЛЕР"
 
 #: templates/base.html:128 templates/base.html:135
 msgid "ГАЛЕРЕЯ"
@@ -57,13 +57,11 @@ msgstr "БЛОГ"
 
 #: templates/base.html:132
 msgid "Ресурсы"
-msgstr "КАРАЖАТТАР"
+msgstr "РЕСУРСТАР"
 
 #: templates/base.html:151
-#, fuzzy
-#| msgid "Институт Стратегии Устойчивого Развития"
 msgid " ОФ \"Институт Стратегии Устойчивого Развития\" "
-msgstr "КФ \"Туруктуу стратегиялык онугуу институту\" "
+msgstr "КФ \"Туруктуу стратегиялык Өнүүгү институту\" "
 
 #: templates/base.html:163
 msgid "СВЯЗАТЬСЯ С НАМИ"
@@ -75,70 +73,75 @@ msgstr "БИЗ СОЦИАЛДЫК ТАРМАКТА"
 
 #: templates/main/about_us.html:18
 msgid "НАШЕ ВИДЕНИЕ"
-msgstr "БИЗДИН КОЗ КАРАШЫБЫЗ"
+msgstr "БИЗДИН КӨЗ КАРАШЫБЫЗ"
 
-#: templates/main/about_us.html:22
+#: templates/main/about_us.html:23
 msgid "МИССИЯ"
 msgstr "МИССИЯБЫЗ"
 
-#: templates/main/about_us.html:29
-msgid "НАШИ ОСНОВЫНЫЕ ЦЕЛИ"
-msgstr "БИЗДИН НЕГИЗГИ МАКСАТТАРЫБЫЗ"
+#: templates/main/about_us.html:31
+msgid "ОСНОВНЫЕ ЦЕЛИ"
+msgstr "НЕГИЗГИ МАКСАТТАРЫБЫЗ"
 
-#: templates/main/about_us.html:53
+#: templates/main/about_us.html:55
 msgid "НАШИ ПАРТНЕРЫ"
-msgstr "БИЗДИН ПАРТНЕЛОРУБУЗ"
+msgstr "Өнөктөштөрүбүз"
 
 #: templates/main/blog.html:24 templates/main/histories.html:20
 #: templates/main/index.html:92
 msgid "ЧИТАТЬ"
 msgstr "ОКУУ"
 
+
 #: templates/main/blog.html:25 templates/main/histories.html:21
 #: templates/main/index.html:39 templates/main/index.html:93
 #: templates/main/news.html:23
 msgid "Поделиться"
-msgstr "Болушуу"
+msgstr "Болүшүү"
 
 #: templates/main/concepts.html:11
-msgid "Биокультаурное разнообразие"
-msgstr "Биокультурдук ар турдуулук"
+msgid "Биокультурное разнообразие"
+msgstr "Биомаданий ар түрдүүлүк"
 
-#: templates/main/concepts.html:20
+#: templates/main/concepts.html:21
 msgid "изменение климата"
-msgstr "климаттын озгорушу"
+msgstr "Климаттын өзгөрүшү"
 
-#: templates/main/concepts.html:26
+#: templates/main/concepts.html:30
 msgid "устойчивое развитие"
-msgstr "туруктуу онугу"
+msgstr "Туруктуу өнүгүү"
+
+#: templates/main/concepts.html:45
+msgid "Слоу Фуд"
+msgstr "Слоу Фуд"
 
 #: templates/main/histories.html:6 templates/main/index.html:78
 msgid "Истории"
-msgstr "Тарыхтарыбыз"
+msgstr "АҢГЕМЕЛЕР"
 
 #: templates/main/index.html:51
 msgid "больше новостей"
-msgstr "дагы жанылыктар"
+msgstr "дагы жаңылыктар"
 
 #: templates/main/index.html:106
 msgid "просмотреть истории"
-msgstr "дагы тарыхтар"
+msgstr "дагы АҢГЕМЕЛЕР"
 
 #: templates/main/index.html:113
 msgid "наши партнеры"
-msgstr "биздин партнерлорубуз"
+msgstr "биздин Өнөктөштөрүбүз"
 
 #: templates/main/index.html:124
 msgid "БУДЬТЕ В КРУСЕ СОБЫТИЙ"
-msgstr "МААЛЫМАТТА КАЛЫНЫЗ"
+msgstr "МААЛЫМАТТА КАЛЫҢЫЗ"
 
 #: templates/main/index.html:125
 msgid "ПОДПИШИТЕСЬ НА РАССЫЛКУ"
-msgstr "Жанылыктарга жазылыныз"
+msgstr "ЖаҢылыктарга жазылыҢыз"
 
 #: templates/main/index.html:129
 msgid "Имя"
-msgstr "Атыныз"
+msgstr "АтыҢыз"
 
 #: templates/main/index.html:130
 msgid "E-mail"
@@ -153,34 +156,21 @@ msgid "Программы"
 msgstr "Программалар"
 
 #: templates/main/our_activities.html:12
-msgid "Местные инициативы по БКР:"
-msgstr "жергиликтүү демилгелер"
+msgid "Продвижение биокультурного разнообразия"
+msgstr "Биомаданий түркүмдүүлүктү сактоо"
 
 #: templates/main/our_activities.html:22
 msgid "Региональные поездки"
 msgstr "Аймактык сапарлар"
 
-#: templates/main/our_activities.html:37
-#, fuzzy
-#| msgid "Основные концепции"
-msgid "Основные результаты"
-msgstr "Негизги концепциялар"
+#: templates/main/our_activities.html:40
+msgid "Устойчивые местные сообщества"
+msgstr "Туруктуу жергиликтүү коомчолор"
 
 #: templates/main/our_activities.html:50
-msgid "Основные мероприятия и результаты (2014-2015)"
-msgstr "Башкы иш-чаралар жана жыйынтыктар (2014-2015)"
-
-#: templates/main/our_activities.html:67
-msgid "устойчивый туризм"
-msgstr "туруктуу туризм"
-
-#: templates/main/our_activities.html:75
 msgid "социальные проекты"
-msgstr "социалдык проекттер"
+msgstr "Социалдык долбоорлор"
 
 #: templates/main/publications.html:8
 msgid "Публикации"
 msgstr "Публикациялар"
-
-#~ msgid "Вы успешно подписаны!"
-#~ msgstr "Сиз ийгиликтуу жазылдыныз!"

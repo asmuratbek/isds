@@ -10,7 +10,7 @@
             <div class="main_slider">
                 {% for item in main_slider %}
                     <div class="items"><img src="{{ item.image.url }}" alt="">
-                        <div class="caption_title"><img src="{% static 'img/captitile.png' %}" alt=""></div>
+                        <div class="caption_title"><img src="{{ mask.image.url }}" alt=""></div>
                         <div class="caption_slogan">{{ item.text }}
                         </div>
                     </div>

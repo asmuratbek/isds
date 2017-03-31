@@ -5,19 +5,25 @@
 <div class="container-fluid news">
     <div class="container novosti">
         <div class="col-md-12 col-sm6 col-xs-12"><img src="
+        {{ get_publication.image.url }}
         {{ article_news.image.url }}
         {{ article_blog.image.url }}
         {{ article_history.image.url }}" alt=""></div>
-        <div class="col-md-12 col-sm6 col-xs-12">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 col-sm6 col-xs-12">
             <div class="title_section">
                 {{ article_news.title }}
+                {{ get_publication.title }}
                 {{ article_blog.title }}
                 {{ article_history.title }}
+
             </div>
+            {{ get_publication.text|safe }}
             {{ article_news.text|safe }}
             {{ article_blog.text|safe }}
             {{ article_history.text|safe }}
         </div>
+        <div class="col-md-2"></div>
     </div>
 </div>
 

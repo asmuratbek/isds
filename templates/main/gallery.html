@@ -10,6 +10,11 @@
                 </div>
             {% endfor %}
         </div>
+        <div class="slider-nav">
+            {% for item in gallery %}
+            <div class="item"><img src="{{ item.image.url }}" alt=""></div>
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock %}

@@ -632,10 +632,10 @@ body {
     padding-bottom: 15px;
     margin-bottom: 15px;
     position: relative;
-    margin: 22px 0 0 0;
+    margin: 21px 0 0 0;
 }
 .col-md-12 p{
-    margin: 22px 0 0 0 !important;
+    margin: 21px 0 0 0 !important;
 }
 .title_section:after {
     position: absolute;
@@ -1221,8 +1221,8 @@ body {
     padding-left: 0;
     padding-right: 0;
     min-height: 400px;
-    background-image: url("../img/tourism_wall.png");
-    background-repeat: no-repeat;
+    /*background-image: url("../img/tourism_wall.png");*/
+    /*background-repeat: no-repeat;*/
     background-position: center;
 }
 
@@ -1233,7 +1233,11 @@ body {
     font-family: "Gotham Pro", sans-serif;
     font-size: 14px;
 }
-
+.slider-nav img{
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
 .social_projects {
     padding-top: 50px;
     padding-bottom: 50px;
