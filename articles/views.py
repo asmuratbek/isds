@@ -121,11 +121,12 @@ def format_news_grid(objects):
         post = dict(
             id=item.id,
             title=item.title,
+            pre_text = item.pre_text,
             text=item.text,
             image=item.image,
             date=item.date,
             article=item.article.title,
-            class_name='col-md-3 col-sm-3 col-xs-12'
+            class_name='col-md-3 col-sm-6 col-xs-12'
         )
         if counter is 1:
             post['class_name'] = 'col-md-6 col-sm-6 col-xs-12'

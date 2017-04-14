@@ -3,83 +3,83 @@
 {% load i18n %}
 
 {% block content %}
-    <div class="container about_us">
-        <div class="col-md-6 col-sm-6 col-xs-12 about_us_image"><img src="{{ about.image.url }}" alt="">
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="section_title default_title">{{ about.title }}</div>
-            <div class="about_us_text"><p>{{ about.text|safe }}</p>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid our_mission_block">
-        <div class="container our_mission">
-            <div class="col-md-12 col-sm-12 col-xs-12 our_mission_text">
-                <div class="section_title"><span class="news_title">{% trans 'НАШЕ ВИДЕНИЕ' %}</span></div>
-                <div class="col-md-6"><img src="{{ about.our_see_image.url }}" alt=""></div>
-                <p>{{ about.our_see }}</p>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12 our_mission_text">
-                <div class="section_title"><span class="news_title">{% trans 'МИССИЯ' %}</span></div>
-                <div class="col-md-6"><img src="{{ about.mission_image.url }}" alt=""></div>
-                <p>{{ about.mission }}</p>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid our_aims_block">
-        <div class="container our_aims">
-            <div class="section_title"><span class="news_title">{% trans 'ОСНОВНЫЕ ЦЕЛИ' %}</span></div>
-            <div class="col-md-6 col-xs-12 col-md-6 our_aims_post no_padding">
-                <div class="col-md-6 col-sm-12 col-xs-12"><img src="{{ about.target1_image.url }}" alt=""></div>
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="our_aims_text"><p>
-                        {{ about.target1_text|safe }}
-                    </p>
+    <div class="wrapper">
+        <div class="container-fluid about-us-page">
+            <div class="container"><a class="dropdown_panel" data-toggle="collapse" href="#left_panel_list"
+                                      aria-expanded="false" aria-controls="left-panel">Навигация по странице</a>
+                <div class="left-panel col-md-3 col-sm-3 col-xs-12" id="left_panel_list">
+                    <ul>
+                        <li class="active_tab"><a href="#about_us" data-toggle="tab">О нас</a></li>
+                        <li><a href="#our_positions" data-toggle="tab">Наше видение</a></li>
+                        <li><a href="#our_mission" data-toggle="tab">Миссия</a></li>
+                        <li><a href="#main_aims" data-toggle="tab">Основные цели</a></li>
+                        <li><a href="#our_partners" data-toggle="tab">Наши партнеры</a></li>
+                        <li><a href="#our_donors" data-toggle="tab">Наши доноры</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content col-md-9 col-sm-9 col-xs-12">
+                    <div class="content tab-pane fade in active" id="about_us">
+                        <div class="content_main_image"><img src="{{ about.image.url }}" alt="">
+                        </div>
+                        <div class="main_content_text_block">
+                            <div class="main_content_tile">{{ about.title }}</div>
+                            <div class="main_content_text">
+                                <p>
+                                    {{ about.text|safe }}
+                                </p></div>
+                        </div>
+                    </div>
+                    <div class="content tab-pane fade" id="our_positions">
+                        <div class="content_main_image"><img src="{{ about.our_see_image.url }}" alt=""></div>
+                        <div class="main_content_text_block">
+                            <div class="main_content_tile">{% trans 'НАШЕ ВИДЕНИЕ' %}</div>
+                            <div class="main_content_text"><p>
+                                {{ about.our_see }}
+                            </p></div>
+                        </div>
+                    </div>
+                    <div class="content tab-pane fade" id="our_mission">
+                        <div class="content_main_image"><img src="{{ about.mission_image.url }}" alt=""></div>
+                        <div class="main_content_text_block">
+                            <div class="main_content_tile">{% trans 'МИССИЯ' %}</div>
+                            <div class="main_content_text"><p>
+                                {{ about.mission }}
+                            </p></div>
+                        </div>
+                    </div>
+                    <div class="content tab-pane fade" id="main_aims">
+                        <div class="content_main_image"><img src="{{ about.target1_image.url }}" alt=""></div>
+                        <div class="main_content_text_block">
+                            <div class="main_content_tile">{% trans 'ОСНОВНЫЕ ЦЕЛИ' %}</div>
+                            <div class="main_content_text"><p>
+                                {{ about.target1_text|safe }}
+                            </p></div>
+                        </div>
+                    </div>
+                    <div class="content tab-pane fade" id="our_partners">
+                        <div class="content_main_image"><img src="{{ about.partner_image.url }}" alt=""></div>
+                        <div class="main_content_text_block">
+                            <div class="main_content_tile">{% trans 'НАШИ ПАРТНЕРЫ' %}</div>
+                            <div class="main_content_text">
+                                <ul class="partners_list">
+                                    {% for item in apartners %}
+                                        <li>{{ item.text }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content tab-pane fade" id="our_donors">
+                        <div class="main_content_text_block">
+                            <div class="donors">
+                                <a href=""><img src="{{ about.partner1.url }}" alt=""></a>
+                                <a href=""><img src="{{ about.partner2.url }}" alt=""></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xs-12 col-md-6 our_aims_post no_padding">
-                <div class="col-md-6 col-sm-12 col-xs-12"><img src="{{ about.target2_image.url }}" alt=""></div>
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="our_aims_text"><p>
-                        {{ about.target2_text|safe }}
-                    </p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    <div class="container-fluid about_us_partners_block">
-        <div class="container about_us_partners">
-            <div class="section_title">
-                <div class="span news_title">{% trans 'НАШИ ПАРТНЕРЫ' %}</div>
-            </div>
 
-            <div class="col-md-6 col-sm 6 col-xs-12">
-                <ul class="partners_list">
-                    {% for item in apartners|slice:"0:5" %}
-                        <li>
-                            {{ item.text }}
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-md-6 col-sm 6 col-xs-12">
-                <ul class="partners_list">
-                    {% for item in apartners|slice:"6:10" %}
-                        <li>
-                            {{ item.text }}
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-
-        </div>
-        <div class="container-fluid our_donors_block">
-            <div class="container our_donors">
-                <div class="donors_image"><img src="{{ about.partner1.url }}" alt=""></div>
-                <div class="donors_image"><img src="{{ about.partner2.url }}" alt=""></div>
-            </div>
-        </div>
-    </div>
 {% endblock %}

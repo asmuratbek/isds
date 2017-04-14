@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block content %}
-
+        <div class="wrapper">
     <div class="container-fluid slides">
         <div class="container photo_slider">
             {% for item in gallery %}
@@ -15,6 +15,7 @@
             <div class="item"><img src="{{ item.image.url }}" alt=""></div>
             {% endfor %}
         </div>
+    </div>
     </div>
 
 {% endblock %}

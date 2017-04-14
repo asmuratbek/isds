@@ -16,9 +16,9 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
-
-from articles.views import *
 from isur import settings
+from articles.views import *
+
 
 urlpatterns = [
     url(r'^jet/', include('jet.urls', 'jet')),

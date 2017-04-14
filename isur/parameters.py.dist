@@ -1,3 +1,3 @@
 DB_USER = 'root'
 DB_PASS = 'root'
-DB_NAME = 'isur'
+DB_NAME = 'eclectika'

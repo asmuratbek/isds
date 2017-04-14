@@ -3,7 +3,9 @@
 {% load i18n %}
 {% block content %}
     {% if reformed_news %}
+        <div class="wrapper">
         <div class="container-fluid news">
+        <div class="news-block">
             <div class="container novosti">
                 <div class="section_title"><span class="news_title">{% trans 'Новости' %}</span></div>
                 <div class="no_padding news_block">
@@ -13,10 +15,11 @@
                                 <div class="post_image"><img src="{{ news.image.url }}" alt=""></div>
                                 <div class="news_post_text">
                                     <div class="title">
-                                        <a href="{% url 'get_news' pk=news.id %}" style="color: #4db277">{{ news.title }}</a>
+                                        <a href="{% url 'get_news' pk=news.id %}"
+                                           style="color: #4db277">{{ news.title }}</a>
                                     </div>
                                     <div class="date no_padding">{{ news.date|date:"d.m.y" }}</div>
-                                    <div class="news_text">{{ news.text|safe }}</div>
+                                    <div class="news_text">{{ news.pre_text|safe }}</div>
 
                                 </div>
                                 <div class="share">
@@ -30,21 +33,23 @@
                             </div>
                         </div>
                     {% endfor %}
-                    <ul class="pagination">
-                        {% for page in pages.paginator.page_range %}
-                            {% if page == pages.number %}
-                                <li class="active"><a>
-                                    <span>{{ page }}</span></a>
-                                </li>
-                            {% else %}
-                                <li><a href="?page={{ page }}">
-                                    <span>{{ page }}</span></a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
                 </div>
             </div>
+            <ul class="pagination">
+                {% for page in pages.paginator.page_range %}
+                    {% if page == pages.number %}
+                        <li class="active"><a>
+                            <span>{{ page }}</span></a>
+                        </li>
+                    {% else %}
+                        <li><a href="?page={{ page }}">
+                            <span>{{ page }}</span></a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        </div>
         </div>
     {% endif %}
 

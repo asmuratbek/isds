@@ -3,15 +3,20 @@
 {% load i18n %}
 
 {% block content %}
-    <div class="container-fluid">
-    <div class="cotainer publications">
-        <div class="section_title default_title">{% trans 'Публикации' %}</div>
-        <div class="publications_wrap">
-            {% for i in publication %}
-            <div class="col-md-3 col-sm-3 col-xs-12 col-lg-3 publications_post"><div class="publications_image"><a href=""><img src="{{ i.image.url }}" alt=""></a></div><div class="publications_link">
-                <a href="{% url 'get_publication' pk=i.id%}">{{ i.title }}</a></div></div>
-            {% endfor %}
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="cotainer publications">
+                <div class="section_title default_title">{% trans 'Публикации' %}</div>
+                <div class="publications_wrap" style="margin-bottom: 40px">
+                    {% for i in publication %}
+                        <div class="col-md-3 col-sm-3 col-xs-12 col-lg-3 publications_post" style="width: 33%">
+                            <div class="publications_image"><a href=""><img src="{{ i.image.url }}" alt=""></a></div>
+                            <div class="publications_link" style="text-align: center;">
+                                <a href="{% url 'get_publication' pk=i.id %}">{{ i.title }}</a></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}

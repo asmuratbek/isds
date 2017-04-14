@@ -24,6 +24,7 @@ class Articles(models.Model):
         verbose_name = 'Материал'
 
     title = models.CharField(max_length=255, verbose_name='Заголовок материала')
+    pre_text = RichTextUploadingField(verbose_name='Анонс материала', null=True, blank=True)
     text = RichTextUploadingField(verbose_name='Текс материала')
     image = models.ImageField(upload_to='images/', verbose_name='Изображение материала')
     date = models.DateTimeField(auto_now_add=True, null=True)

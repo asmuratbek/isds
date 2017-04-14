@@ -22,6 +22,7 @@ class AboutUs(models.Model):
     target1_text = models.TextField(verbose_name='Текс для левого блока')
     target2_image = models.ImageField(upload_to='images/about_us', verbose_name='Изображение для правого блока')
     target2_text = models.TextField(verbose_name='Текс для правого блока')
+    partner_image = models.ImageField(upload_to='images/about_us', verbose_name='Изображение для блока партнеры', null=True, blank=True)
     partner1 = models.ImageField(upload_to='images/about_us', verbose_name='Лого первого партнера')
     partner2 = models.ImageField(upload_to='images/about_us', verbose_name='Лого второго партнера')
 

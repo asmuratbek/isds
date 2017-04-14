@@ -23,7 +23,7 @@ $(document).ready(function () {
     $('.photo_slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         fade: true,
         autoplay: true,
         asNavFor: '.slider-nav'
@@ -32,8 +32,9 @@ $(document).ready(function () {
         slidesToShow: 10,
         slidesToScroll: 1,
         asNavFor: '.photo-slider',
-        dots: true,
+        dots: false,
         centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+        centerPadding:'60px',
     });
 });
