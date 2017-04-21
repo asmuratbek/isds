@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-31 18:01+0600\n"
+"POT-Creation-Date: 2017-04-21 21:46+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,7 @@ msgid "Главная"
 msgstr "Башкы"
 
 #: templates/base.html:120 templates/base.html:155
+#: templates/main/about_us.html:12
 msgid "О нас"
 msgstr "Биз жөнүндө"
 
@@ -35,7 +36,7 @@ msgid "Основные концепции"
 msgstr "Негизги концепциялар"
 
 #: templates/base.html:126 templates/base.html:158 templates/main/index.html:24
-#: templates/main/news.html:8
+#: templates/main/news.html:10
 msgid "Новости"
 msgstr "Жаңылыктар"
 
@@ -51,7 +52,7 @@ msgstr "ГАЛЕРЕЯ"
 msgid "публикации"
 msgstr "публикациялар"
 
-#: templates/base.html:130 templates/base.html:137 templates/main/blog.html:7
+#: templates/base.html:130 templates/base.html:137 templates/main/blog.html:8
 msgid "БЛОГ"
 msgstr "БЛОГ"
 
@@ -71,51 +72,80 @@ msgstr "БИЗ МЕНЕН БАЙЛАНЫШУУ"
 msgid "МЫ В СОЦИАЛЬНЫХ СЕТЯХ"
 msgstr "БИЗ СОЦИАЛДЫК ТАРМАКТА"
 
-#: templates/main/about_us.html:18
+#: templates/main/about_us.html:13
+msgid "Наше видение"
+msgstr "Көз карашыбыз"
+
+#: templates/main/about_us.html:14
+msgid "Миссия"
+msgstr "Миссиябыз"
+
+#: templates/main/about_us.html:15
+msgid "Основные цели"
+msgstr "Максаттарыбыз"
+
+#: templates/main/about_us.html:16
+
+msgid "Наши партнеры"
+msgstr "Партнерлор"
+
+#: templates/main/about_us.html:17
+msgid "Наши доноры"
+msgstr "Донорлор"
+
+#: templates/main/about_us.html:35
 msgid "НАШЕ ВИДЕНИЕ"
 msgstr "БИЗДИН КӨЗ КАРАШЫБЫЗ"
 
-#: templates/main/about_us.html:23
+#: templates/main/about_us.html:44
 msgid "МИССИЯ"
 msgstr "МИССИЯБЫЗ"
 
-#: templates/main/about_us.html:31
+#: templates/main/about_us.html:53
 msgid "ОСНОВНЫЕ ЦЕЛИ"
 msgstr "НЕГИЗГИ МАКСАТТАРЫБЫЗ"
 
-#: templates/main/about_us.html:55
+#: templates/main/about_us.html:62
 msgid "НАШИ ПАРТНЕРЫ"
 msgstr "Өнөктөштөрүбүз"
 
-#: templates/main/blog.html:24 templates/main/histories.html:20
+#: templates/main/blog.html:25 templates/main/histories.html:21
 #: templates/main/index.html:92
 msgid "ЧИТАТЬ"
 msgstr "ОКУУ"
 
-
-#: templates/main/blog.html:25 templates/main/histories.html:21
+#: templates/main/blog.html:26 templates/main/histories.html:22
 #: templates/main/index.html:39 templates/main/index.html:93
-#: templates/main/news.html:23
+#: templates/main/news.html:26
 msgid "Поделиться"
 msgstr "Болүшүү"
 
-#: templates/main/concepts.html:11
+#: templates/main/concepts.html:13 templates/main/concepts.html:23
 msgid "Биокультурное разнообразие"
 msgstr "Биомаданий ар түрдүүлүк"
 
-#: templates/main/concepts.html:21
+#: templates/main/concepts.html:14
 msgid "изменение климата"
 msgstr "Климаттын өзгөрүшү"
 
-#: templates/main/concepts.html:30
+#: templates/main/concepts.html:15
 msgid "устойчивое развитие"
 msgstr "Туруктуу өнүгүү"
 
-#: templates/main/concepts.html:45
+#: templates/main/concepts.html:16 templates/main/concepts.html:52
 msgid "Слоу Фуд"
 msgstr "Слоу Фуд"
 
-#: templates/main/histories.html:6 templates/main/index.html:78
+#: templates/main/concepts.html:34
+
+msgid "Изменение климата"
+msgstr "Климаттын өзгөрүшү"
+
+#: templates/main/concepts.html:43
+msgid "Устойчивое развитие"
+msgstr "Туруктуу өнүгүү"
+
+#: templates/main/histories.html:7 templates/main/index.html:78
 msgid "Истории"
 msgstr "АҢГЕМЕЛЕР"
 
@@ -151,26 +181,28 @@ msgstr "E-mail"
 msgid "ОТПРАВИТЬ"
 msgstr "Жазылуу"
 
-#: templates/main/our_activities.html:7
-msgid "Программы"
-msgstr "Программалар"
-
-#: templates/main/our_activities.html:12
+#: templates/main/our_activities.html:11 templates/main/our_activities.html:21
 msgid "Продвижение биокультурного разнообразия"
 msgstr "Биомаданий түркүмдүүлүктү сактоо"
 
-#: templates/main/our_activities.html:22
+#: templates/main/our_activities.html:13 templates/main/our_activities.html:34
 msgid "Региональные поездки"
 msgstr "Аймактык сапарлар"
 
-#: templates/main/our_activities.html:40
+#: templates/main/our_activities.html:14 templates/main/our_activities.html:49
 msgid "Устойчивые местные сообщества"
 msgstr "Туруктуу жергиликтүү коомчолор"
 
-#: templates/main/our_activities.html:50
+#: templates/main/our_activities.html:15
+
+msgid "Cоциальные проекты"
+msgstr "Социалдык долбоорлор"
+
+#: templates/main/our_activities.html:55
 msgid "социальные проекты"
 msgstr "Социалдык долбоорлор"
 
-#: templates/main/publications.html:8
+#: templates/main/publications.html:9
 msgid "Публикации"
 msgstr "Публикациялар"
+

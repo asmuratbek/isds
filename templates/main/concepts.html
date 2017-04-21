@@ -3,52 +3,63 @@
 {% load i18n %}
 
 {% block content %}
-
-    <div class="container-fluid bio_concepts">
-        <div class="bio_concepts_after"></div>
-        <div class="container">
-            <div class="col-md-6 col-sm-6 col-xs-12 bio_concepts_text">
-                <div class="bio_title_container"><span class="bio_title">{% trans 'Биокультурное разнообразие' %}</span>
+    <div class="wrapper">
+        <div class="container-fluid about-us-page">
+            <div class="container"><a class="dropdown_panel" data-toggle="collapse" href="#left_panel_list"
+                                      aria-expanded="false" aria-controls="left-panel">Навигация по странице</a>
+                <div class="left-panel col-md-3 col-sm-3 col-xs-12" id="left_panel_list">
+                    <ul>
+                        <li class="active_tab"><a href="#about_us"
+                                                  data-toggle="tab">{% trans 'Биокультурное разнообразие' %}</a></li>
+                        <li><a href="#our_position" data-toggle="tab">{% trans 'изменение климата' %}</a></li>
+                        <li><a href="#develop" data-toggle="tab">{% trans 'устойчивое развитие' %}</a></li>
+                        <li><a href="#slow" data-toggle="tab">{% trans 'Слоу Фуд' %}</a></li>
+                    </ul>
                 </div>
-
-                <p>{{ concepts.bio }}</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid climate_changes_block">
-        <div class="container climate_changes">
-            <div class="section_title"><span class="news_title">{% trans 'изменение климата' %}</span></div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <img src="{{ concepts.climate_image.url }}">
-            </div>
-            <p>{{ concepts.climate }}</p>
-        </div>
-    </div>
-    <div class="container-fluid sustainable_development_block">
-        <div class="container sustainable_development">
-            <div class="section_title"><span class="news_title">{% trans 'устойчивое развитие' %}</span></div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <img src="{{ concepts.development_image.url }}">
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-            <p>{{ concepts.development }}</p>
-            </div>
-            <div class="col-md-12 col-sm-6 col-xs-12">
-            <div class="partner_block">
-
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <img src="{{ concepts.slow_food_image.url }}" alt="">
+                <div class="tab-content col-md-9 col-sm-9 col-xs-12">
+                    <div class="content tab-pane fade in active" id="about_us">
+                        <div class="content_main_image">
+                            <div class="main_content_text_block">
+                                <div class="main_content_tile">{% trans 'Биокультурное разнообразие' %}</div>
+                                <div class="main_content_text">
+                                    <p>
+                                        {{ concepts.bio }}
+                                    </p></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="section_title default_title">{% trans 'Слоу Фуд' %}</div>
-                        <p>{{ concepts.slow_food_text }}</p>
+                    <div class="content tab-pane fade" id="our_position">
+                        <div class="content_main_image"><img src="{{ concepts.climate_image.url }}" alt=""></div>
+                        <div class="main_content_text_block">
+                            <div class="main_content_tile">{% trans 'Изменение климата' %}</div>
+                            <div class="main_content_text"><p>
+                                {{ concepts.climate }}
+                            </p></div>
+                        </div>
+                    </div>
+                    <div class="content tab-pane fade" id="develop">
+                        <div class="content_main_image"><img src="{{ concepts.development_image.url }}" alt=""></div>
+                        <div class="main_content_text_block">
+                            <div class="main_content_tile">{% trans 'Устойчивое развитие' %}</div>
+                            <div class="main_content_text"><p>
+                                {{ concepts.development }}
+                            </p></div>
+                        </div>
+                    </div>
+                    <div class="content tab-pane fade" id="slow">
+                        <div class="content_main_image"><img src="{{ concepts.slow_food_image.url }}" alt=""></div>
+                        <div class="main_content_text_block">
+                            <div class="main_content_tile">{% trans 'Слоу Фуд' %}</div>
+                            <div class="main_content_text"><p>
+                                {{ concepts.slow_food_text }}
+                            </p></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
         </div>
     </div>
+
 
 {% endblock %}
+

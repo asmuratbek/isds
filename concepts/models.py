@@ -12,10 +12,10 @@ class MainConcepts(models.Model):
 
     title = models.CharField(max_length=255, default='Редактировать текст Основных концепций')
     bio = models.TextField(verbose_name='Биокультурное разнообразие')
-    climate_image = models.ImageField(upload_to='images/main', verbose_name='Изображение для изменение климата')
+    climate_image = models.ImageField(upload_to='images/main', verbose_name='Изображение для изменение климата - 790x780px')
     climate = models.TextField(verbose_name='Текст для именение климата')
-    development_image = models.ImageField(upload_to='images/main', verbose_name='Изображение для устойчивого развития')
+    development_image = models.ImageField(upload_to='images/main', verbose_name='Изображение для устойчивого развития - 790x780px')
     development = models.TextField(verbose_name='Текст для утойчивого развития')
-    slow_food_image = models.ImageField(upload_to='images/concepts', verbose_name='Изображение для Slow food')
+    slow_food_image = models.ImageField(upload_to='images/concepts', verbose_name='Изображение для Slow food - 790x780px')
     slow_food_text = models.TextField(verbose_name='Текст для Slow Food')
 

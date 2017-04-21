@@ -83,10 +83,39 @@ $(document).ready(function () {
         }
 
     });
-    var blockHeight=$('.bio_concepts').height();
-    $('.bio_concepts_after').height(blockHeight)
+    var blockHeight = $('.bio_concepts').height();
+    $('.bio_concepts_after').height(blockHeight);
+    $('.left-panel ul li a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+        $('.left-panel ul li').each(function () {
+            $(this).removeClass('active_tab');
+        });
+        $(this).parent().addClass('active_tab');
+    });
+    if ($(window).width() < '767') {
+        $('.left-panel').addClass('collapse')
+    }
+    else {
+        $('.left-panel').removeClass('collapse')
+    }
 });
 $(window).resize(function () {
-    var blockHeight=$('.bio_concepts').height();
-    $('.bio_concepts_after').height(blockHeight)
-})
+    if ($(window).width() < '767') {
+        $('.left-panel').addClass('collapse')
+    }
+    else {
+        $('.left-panel').removeClass('collapse')
+    }
+
+});
+$(window).resize(function () {
+    var blockHeight = $('.bio_concepts').height();
+    $('.bio_concepts_after').height(blockHeight);
+    if ($(window).width() < '767') {
+        $('.left-panel').addClass('collapse');
+    }
+    else {
+        $('.left-panel').removeClass('collapse')
+    }
+});

@@ -7,13 +7,7 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: Conv_GothamProBold;
-    src: url('../fonts/GothamProBold.eot');
-    src: local('☺'), url('../fonts/GothamProBold.woff') format('woff'), url('../fonts/GothamProBold.ttf') format('truetype'), url('../fonts/GothamProBold.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 @font-face {
     font-family: Raleway;
@@ -475,7 +469,7 @@ body {
 
 .news_title {
     position: relative;
-    font-family: Conv_GothamProBold, sans-serif;
+    font-family: GothamPro, sans-serif;
     font-size: 26px;
     text-transform: uppercase;
     text-align: center;
@@ -497,7 +491,7 @@ body {
 }
 
 .title_style {
-    font-family: Conv_GothamProBold, sans-serif;
+    font-family: GothamPro, sans-serif;
     font-size: 26px;
     text-transform: uppercase;
     text-align: center;
@@ -620,7 +614,7 @@ body {
 
 .title_section {
     font-size: 24px;
-    font-family: "Conv_GothamProBold", sans-serif;
+    font-family: "GothamPro", sans-serif;
     color: #4DB277;
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -1005,7 +999,7 @@ body {
 
 .footer_title {
     color: #fff;
-    font-family: Conv_GothamProBold, sans-serif;
+    font-family: GothamPro, sans-serif;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -1080,7 +1074,7 @@ body {
 .default_title {
     text-transform: uppercase;
     margin-bottom: 40px;
-    font-family: Conv_GothamProBold, sans-serif;
+    font-family: GothamPro, sans-serif;
     font-size: 26px;
 }
 
@@ -1283,7 +1277,7 @@ body {
 
 .bio_title {
     position: relative;
-    font-family: Conv_GothamProBold, sans-serif;
+    font-family: GothamPro, sans-serif;
     font-size: 26px;
     text-transform: uppercase;
     padding-bottom: 40px;
@@ -1576,7 +1570,7 @@ body {
     border-bottom: 1px solid silver;
     cursor: pointer;
     padding-left: 30px;
-    line-height: 50px;
+    line-height: 17px;
     vertical-align: middle;
     box-sizing: border-box;
     border-left: 5px solid transparent;
@@ -1597,6 +1591,7 @@ body {
     font-family: "Gotham Pro", sans-serif;
     font-size: 16px;
     color: #000;
+    padding: 10px 0 0 0;
 }
 
 .left-panel ul li:last-child {
@@ -1721,18 +1716,56 @@ body {
     margin-top: 60px;
 }
 
+.blockquote {
+    max-width: 773px;
+    margin: auto;
+}
+
 .news-block {
     display: flex;
     flex-direction: column;
 }
-@media(max-width: 1200px){
-    .left-panel{
+.news_title{
+    font-family:"Gotham Pro",Sans-Serif;
+}
+.content_main_image {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.content_main_image img {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+    min-width: 100%;
+    width: auto;
+    min-height: 100%;
+    height: auto;
+}
+
+.wrapper {
+    margin-top: 90px;
+}
+
+.activities_page {
+    margin-bottom: 90px;
+}
+
+
+@media (max-width: 1200px) {
+    .left-panel {
         width: 250px;
     }
-    .tab-content{
+
+    .tab-content {
         max-width: 650px;
     }
 }
+
 @media (min-width: 767px) {
     .navbar-header {
         display: none;
