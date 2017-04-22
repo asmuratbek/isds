@@ -71,13 +71,34 @@ class SocialProjects(models.Model):
 
     text = RichTextUploadingField(verbose_name='Текст для социальных проектов')
 
+    def text_html(self):
+        return self.text
+
+    text_html.short_description = 'Content'
+    text_html.allow_tags = True
+
+    def __unicode__(self):
+        return self.text
+
+
 
 class Tourism(models.Model):
     class Meta:
         verbose_name_plural = 'Устойчивый Туризм'
         verbose_name = 'Устойчивый Туризм'
-    image = models.ImageField(upload_to='images/tourism', verbose_name='Изображение для блока устойчивый туризм - 790x780px')
+
+    image = models.ImageField(upload_to='images/tourism',
+                              verbose_name='Изображение для блока устойчивый туризм - 790x780px')
     text = RichTextUploadingField(verbose_name='Текст для устойчивого туризма')
+
+    def text_html(self):
+        return self.text
+
+    text_html.short_description = 'Content'
+    text_html.allow_tags = True
+
+    def __unicode__(self):
+        return self.text
 
 
 class Contacts(models.Model):
@@ -97,7 +118,8 @@ class Publications(models.Model):
         verbose_name = 'Публикация'
 
     title = models.CharField(max_length=250, verbose_name='Название')
-    image = models.ImageField(upload_to='images/publication', verbose_name='Изображение для публикации - 200x200px', default='1')
+    image = models.ImageField(upload_to='images/publication', verbose_name='Изображение для публикации - 200x200px',
+                              default='1')
     text = models.CharField(max_length=300, verbose_name='Текст публикаци')
     date = models.DateTimeField(auto_now_add=True, null=True)
 
@@ -109,6 +131,7 @@ class Logo(models.Model):
 
     title = models.CharField(max_length=255, verbose_name='Название', default='Редактировать логотипы')
     image = models.ImageField(upload_to='images/logo', verbose_name='Изображение для лого - 241x109px')
+
 
 class SliderMask(models.Model):
     class Meta:

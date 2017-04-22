@@ -28,11 +28,11 @@ class ProgrammsAdmin(TabbedTranslationAdmin):
 
 
 class TourismAdmin(TabbedTranslationAdmin):
-    list_display = ('text',)
+    list_display = ('text_html',)
 
 
 class SocialProjectsAdmin(TabbedTranslationAdmin):
-    list_display = ('text',)
+    list_display = ('text_html',)
 
 
 class PublicationsAdmin(TabbedTranslationAdmin):
