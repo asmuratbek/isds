@@ -41,7 +41,7 @@ msgstr "News"
 
 #: templates/base.html:127 templates/base.html:134
 msgid "ИСТОРИИ"
-msgstr "HISTORIES"
+msgstr "STORIES"
 
 #: templates/base.html:128 templates/base.html:135
 msgid "ГАЛЕРЕЯ"
@@ -153,7 +153,7 @@ msgstr "more news"
 
 #: templates/main/index.html:106
 msgid "просмотреть истории"
-msgstr "more histories"
+msgstr "more stories"
 
 #: templates/main/index.html:113
 msgid "наши партнеры"
