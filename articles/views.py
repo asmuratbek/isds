@@ -197,9 +197,9 @@ def mainconcepts(request):
 
 def our_activities(request):
     local = Programms.objects.filter(
-        category__in=Category.objects.filter(title_ru='ПБР')).distinct()
+        category__in=Category.objects.filter(title_ru='Местные инициативы')).distinct()
     regional = Programms.objects.filter(
-        category__in=Category.objects.filter(title_ru='РП')).distinct()
+        category__in=Category.objects.filter(title_ru='Обмен опытом')).distinct()
 
     tourism = Tourism.objects.first()
     socialp = SocialProjects.objects.all()

@@ -8,17 +8,17 @@
                                   aria-expanded="false" aria-controls="left-panel">Навигация по странице</a>
             <div class="left-panel" id="left_panel_list">
                 <ul>
-                    <li class="active_tab"><a href="#programm1" data-toggle="tab"> {% trans 'Продвижение биокультурного разнообразия' %}</a>
+                    <li class="active_tab"><a href="#programm1" data-toggle="tab"> {% trans 'Местные инициативы' %}</a>
                     </li>
-                    <li><a href="#programm2" data-toggle="tab">{% trans 'Региональные поездки' %}</a></li>
-                    <li><a href="#static_unity" data-toggle="tab">{% trans 'Устойчивые местные сообщества' %}</a></li>
-                    <li><a href="#social_projects" data-toggle="tab">{% trans 'Cоциальные проекты' %}</a></li>
+                    <li><a href="#programm2" data-toggle="tab">{% trans 'Обмент опытом' %}</a></li>
+                    <li><a href="#social_projects" data-toggle="tab">{% trans 'Cоциальное предпринимательство' %}</a></li>
+                    <li><a href="#static_unity" data-toggle="tab">{% trans 'Устойчивый туризм' %}</a></li>
                 </ul>
             </div>
             <div class="tab-content col-md-9 col-sm-9 col-xs-12">
                 <div class="program_post tab-pane fade in active" id="programm1">
                     <div class="main_content_text_block">
-                        <div class="programs_post_title">{% trans 'Продвижение биокультурного разнообразия' %}</div>
+                        <div class="programs_post_title">{% trans 'Местные инициативы' %}</div>
                         <div class="main_content_text">
                             <ul>
                                 {% for i in local %}
@@ -31,7 +31,7 @@
                 </div>
                 <div class="program_post tab-pane fade" id="programm2">
                     <div class="main_content_text_block">
-                        <div class="programs_post_title">{% trans 'Региональные поездки' %}</div>
+                        <div class="programs_post_title">{% trans 'Обмен опытом' %}</div>
                         <div class="main_content_text">
                             <ul>
                                 {% for i in regional %}
@@ -46,13 +46,13 @@
                 <div class="content tab-pane fade" id="static_unity">
                     <div class="content_main_image"><img src="{{ tourism.image.url }}" alt=""></div>
                     <div class="main_content_text_block">
-                        <div class="main_content_tile">{% trans 'Устойчивые местные сообщества' %}</div>
+                        <div class="main_content_tile">{% trans 'Устойчивый туризм' %}</div>
                         <div class="main_content_text"><p>{{ tourism.text|safe}}</p></div>
                     </div>
                 </div>
                 <div class="content tab-pane fade" id="social_projects">
                     <div class="main_content_text_block">
-                        <div class="main_content_tile">{% trans 'социальные проекты' %}</div>
+                        <div class="main_content_tile">{% trans 'Социальное предпринимательство' %}</div>
                         <div class="main_content_text">
                             <ul>
                                  {% for i in  socialp %}

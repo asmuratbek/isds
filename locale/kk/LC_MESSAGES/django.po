@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 21:46+0600\n"
+"POT-Creation-Date: 2017-04-25 12:24+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,6 @@ msgid "Основные цели"
 msgstr "Максаттарыбыз"
 
 #: templates/main/about_us.html:16
-
 msgid "Наши партнеры"
 msgstr "Партнерлор"
 
@@ -120,30 +119,25 @@ msgstr "ОКУУ"
 msgid "Поделиться"
 msgstr "Болүшүү"
 
-#: templates/main/concepts.html:13 templates/main/concepts.html:23
+#: templates/main/concepts.html:12 templates/main/concepts.html:44
+msgid "Устойчивое развитие"
+msgstr "Туруктуу өнүгүү"
+
+#: templates/main/concepts.html:15 templates/main/concepts.html:24
 msgid "Биокультурное разнообразие"
 msgstr "Биомаданий ар түрдүүлүк"
 
-#: templates/main/concepts.html:14
+#: templates/main/concepts.html:16
 msgid "изменение климата"
 msgstr "Климаттын өзгөрүшү"
 
-#: templates/main/concepts.html:15
-msgid "устойчивое развитие"
-msgstr "Туруктуу өнүгүү"
-
-#: templates/main/concepts.html:16 templates/main/concepts.html:52
+#: templates/main/concepts.html:17 templates/main/concepts.html:53
 msgid "Слоу Фуд"
 msgstr "Слоу Фуд"
 
-#: templates/main/concepts.html:34
-
+#: templates/main/concepts.html:35
 msgid "Изменение климата"
 msgstr "Климаттын өзгөрүшү"
-
-#: templates/main/concepts.html:43
-msgid "Устойчивое развитие"
-msgstr "Туруктуу өнүгүү"
 
 #: templates/main/histories.html:7 templates/main/index.html:78
 msgid "Истории"
@@ -182,27 +176,32 @@ msgid "ОТПРАВИТЬ"
 msgstr "Жазылуу"
 
 #: templates/main/our_activities.html:11 templates/main/our_activities.html:21
-msgid "Продвижение биокультурного разнообразия"
-msgstr "Биомаданий түркүмдүүлүктү сактоо"
+msgid "Местные инициативы"
+msgstr "Жергиликтүү демилгелер"
 
-#: templates/main/our_activities.html:13 templates/main/our_activities.html:34
-msgid "Региональные поездки"
-msgstr "Аймактык сапарлар"
+#: templates/main/our_activities.html:13
+msgid "Обмент опытом"
+msgstr "Тажрыйба алмашуу"
 
-#: templates/main/our_activities.html:14 templates/main/our_activities.html:49
-msgid "Устойчивые местные сообщества"
-msgstr "Туруктуу жергиликтүү коомчолор"
-
-#: templates/main/our_activities.html:15
-
-msgid "Cоциальные проекты"
+#: templates/main/our_activities.html:14
+msgid "Cоциальное предпринимательство"
 msgstr "Социалдык долбоорлор"
+
+#: templates/main/our_activities.html:15 templates/main/our_activities.html:49
+msgid "Устойчивый туризм"
+msgstr "Туруктуу туризм"
+
+#: templates/main/our_activities.html:34
+msgid "Обмен опытом"
+msgstr "Тажрыйба алмашуу"
 
 #: templates/main/our_activities.html:55
-msgid "социальные проекты"
-msgstr "Социалдык долбоорлор"
+msgid "Социальное предпринимательство"
+msgstr "Социалдык ишкердик"
 
 #: templates/main/publications.html:9
 msgid "Публикации"
 msgstr "Публикациялар"
 
+#~ msgid "устойчивое развитие"
+#~ msgstr "Туруктуу өнүгүү"

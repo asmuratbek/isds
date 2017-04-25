@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 21:46+0600\n"
+"POT-Creation-Date: 2017-04-25 12:24+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,7 +80,6 @@ msgid "Миссия"
 msgstr "Our missoin"
 
 #: templates/main/about_us.html:15
-
 msgid "Основные цели"
 msgstr "Main concepts"
 
@@ -119,29 +118,25 @@ msgstr "READ MORE"
 msgid "Поделиться"
 msgstr "Share"
 
-#: templates/main/concepts.html:13 templates/main/concepts.html:23
+#: templates/main/concepts.html:12 templates/main/concepts.html:44
+msgid "Устойчивое развитие"
+msgstr "Sustainable development"
+
+#: templates/main/concepts.html:15 templates/main/concepts.html:24
 msgid "Биокультурное разнообразие"
 msgstr "Biocultural diversity "
 
-#: templates/main/concepts.html:14
+#: templates/main/concepts.html:16
 msgid "изменение климата"
 msgstr "Climate change"
 
-#: templates/main/concepts.html:15
-msgid "устойчивое развитие"
-msgstr "sustainable development"
-
-#: templates/main/concepts.html:16 templates/main/concepts.html:52
+#: templates/main/concepts.html:17 templates/main/concepts.html:53
 msgid "Слоу Фуд"
 msgstr "Slow food"
 
-#: templates/main/concepts.html:34
+#: templates/main/concepts.html:35
 msgid "Изменение климата"
 msgstr "Climate change"
-
-#: templates/main/concepts.html:43
-msgid "Устойчивое развитие"
-msgstr "sustainable development"
 
 #: templates/main/histories.html:7 templates/main/index.html:78
 msgid "Истории"
@@ -180,25 +175,32 @@ msgid "ОТПРАВИТЬ"
 msgstr "SUBSCRIBE"
 
 #: templates/main/our_activities.html:11 templates/main/our_activities.html:21
-msgid "Продвижение биокультурного разнообразия"
-msgstr "Promoting biocultural diversity"
+msgid "Местные инициативы"
+msgstr "Main concepts"
 
-#: templates/main/our_activities.html:13 templates/main/our_activities.html:34
-msgid "Региональные поездки"
-msgstr "Regional travels"
+#: templates/main/our_activities.html:13
+msgid "Обмент опытом"
+msgstr "Exchange of experience"
 
-#: templates/main/our_activities.html:14 templates/main/our_activities.html:49
-msgid "Устойчивые местные сообщества"
-msgstr "Sustainable communities"
+#: templates/main/our_activities.html:14
+msgid "Cоциальное предпринимательство"
+msgstr "Social entrepreneurship"
 
-#: templates/main/our_activities.html:15
-msgid "Cоциальные проекты"
-msgstr "social projects"
+#: templates/main/our_activities.html:15 templates/main/our_activities.html:49
+msgid "Устойчивый туризм"
+msgstr "Sustainable tourism"
+
+#: templates/main/our_activities.html:34
+msgid "Обмен опытом"
+msgstr "Exchange of experience"
 
 #: templates/main/our_activities.html:55
-msgid "социальные проекты"
-msgstr "social projects"
+msgid "Социальное предпринимательство"
+msgstr "Social entrepreneurship"
 
 #: templates/main/publications.html:9
 msgid "Публикации"
 msgstr "Publications"
+
+#~ msgid "устойчивое развитие"
+#~ msgstr "Sustainable development"
