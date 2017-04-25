@@ -1822,11 +1822,12 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.photo_slider .polite{
+.photo_slider .slick-list-draggable{
     width:100% !important;
 }
 .slider-nav .item{
-    width: 105px;
+    position: relative;
+    width: 105px !important;
     height: 105px;
     overflow: hidden;
 }
