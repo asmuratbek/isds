@@ -31,7 +31,7 @@ $(document).ready(function () {
     $('.slider-nav').slick({
         slidesToShow: 10,
         slidesToScroll: 1,
-        asNavFor: '.photo-slider',
+        asNavFor: '.photo_slider',
         dots: false,
         centerMode: true,
         focusOnSelect: true,
