@@ -1822,7 +1822,22 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
+.photo_slider .polite{
+    width:100% !important;
+}
+.slider-nav .item{
+    width: 105px;
+    height: 105px;
+    overflow: hidden;
+}
+.slider-nav .item img{
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left:-9999px;
+    right:-9999px;
+    margin: auto;
+}
 @media (max-width: 1200px) {
     .left-panel {
         width: 250px;
