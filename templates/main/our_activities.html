@@ -17,29 +17,28 @@
             </div>
             <div class="tab-content col-md-9 col-sm-9 col-xs-12">
                 <div class="program_post tab-pane fade in active" id="programm1">
-                    <div class="main_content_text_block">
+                    <div class="main_content_text_block_my">
                         <div class="main_content_tile">{% trans 'Местные инициативы' %}</div>
                         <div class="main_content_text">
-                            <ul>
+
                                 {% for i in local %}
-                                    <li>{{ i.text|safe }}
-                                    </li>
+                                    {{ i.text|safe }}
                                 {% endfor %}
-                            </ul>
+
                         </div>
                     </div>
                 </div>
                 <div class="program_post tab-pane fade" id="programm2">
-                    <div class="main_content_text_block">
+                    <div class="main_content_text_block_my">
                         <div class="main_content_tile">{% trans 'Обмен опытом' %}</div>
                         <div class="main_content_text">
-                            <ul>
+
                                 {% for i in regional %}
-                                    <li>
+
                                         {{ i.text|safe }}
-                                    </li>
+
                                 {% endfor %}
-                            </ul>
+
                         </div>
                     </div>
                 </div>
@@ -51,16 +50,16 @@
                     </div>
                 </div>
                 <div class="content tab-pane fade" id="social_projects">
-                    <div class="main_content_text_block">
+                    <div class="main_content_text_block_my  ">
                         <div class="main_content_tile">{% trans 'Социальное предпринимательство' %}</div>
                         <div class="main_content_text">
-                            <ul>
+
                                  {% for i in  socialp %}
-                                  <li>
+
                                     {{ i.text|safe }}
-                                  </li>
+
                                  {% endfor %}
-                            </ul>
+
                         </div>
                     </div>
                 </div>

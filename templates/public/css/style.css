@@ -1130,7 +1130,6 @@ body {
 
 .program_post {
     float: left;
-    padding: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
@@ -1630,6 +1629,8 @@ body {
 .main_content_text_block {
     margin-top: 40px;
 }
+
+
 
 .main_content_tile {
     position: relative;

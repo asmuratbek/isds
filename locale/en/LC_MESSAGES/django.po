@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-25 12:24+0600\n"
+"POT-Creation-Date: 2017-05-02 14:37+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,25 +118,21 @@ msgstr "READ MORE"
 msgid "Поделиться"
 msgstr "Share"
 
-#: templates/main/concepts.html:12 templates/main/concepts.html:44
+#: templates/main/concepts.html:12 templates/main/concepts.html:42
 msgid "Устойчивое развитие"
 msgstr "Sustainable development"
 
-#: templates/main/concepts.html:15 templates/main/concepts.html:24
+#: templates/main/concepts.html:14 templates/main/concepts.html:23
 msgid "Биокультурное разнообразие"
 msgstr "Biocultural diversity "
 
-#: templates/main/concepts.html:16
-msgid "изменение климата"
-msgstr "Climate change"
-
-#: templates/main/concepts.html:17 templates/main/concepts.html:53
-msgid "Слоу Фуд"
-msgstr "Slow food"
-
-#: templates/main/concepts.html:35
+#: templates/main/concepts.html:15 templates/main/concepts.html:33
 msgid "Изменение климата"
 msgstr "Climate change"
+
+#: templates/main/concepts.html:16 templates/main/concepts.html:51
+msgid "Слоу Фуд"
+msgstr "Slow food"
 
 #: templates/main/histories.html:7 templates/main/index.html:78
 msgid "Истории"
@@ -186,21 +182,24 @@ msgstr "Exchange of experience"
 msgid "Cоциальное предпринимательство"
 msgstr "Social entrepreneurship"
 
-#: templates/main/our_activities.html:15 templates/main/our_activities.html:49
+#: templates/main/our_activities.html:15 templates/main/our_activities.html:48
 msgid "Устойчивый туризм"
 msgstr "Sustainable tourism"
 
-#: templates/main/our_activities.html:34
+#: templates/main/our_activities.html:33
 msgid "Обмен опытом"
 msgstr "Exchange of experience"
 
-#: templates/main/our_activities.html:55
+#: templates/main/our_activities.html:54
 msgid "Социальное предпринимательство"
 msgstr "Social entrepreneurship"
 
 #: templates/main/publications.html:9
 msgid "Публикации"
 msgstr "Publications"
+
+#~ msgid "изменение климата"
+#~ msgstr "Climate change"
 
 #~ msgid "устойчивое развитие"
 #~ msgstr "Sustainable development"

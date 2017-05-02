@@ -1130,7 +1130,6 @@ body {
 
 .program_post {
     float: left;
-    padding: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
@@ -1631,6 +1630,8 @@ body {
     margin-top: 40px;
 }
 
+
+
 .main_content_tile {
     position: relative;
     font-family: "Gotham Pro", sans-serif;
@@ -1831,14 +1832,15 @@ body {
     height: 105px;
     overflow: hidden;
 }
-.slider-nav .item img{
+.slider-nav .item img {
     position: absolute;
     height: 100%;
     width: auto;
-    left:-9999px;
-    right:-9999px;
+    left: -9999px;
+    right: -9999px;
     margin: auto;
 }
+
 @media (max-width: 1200px) {
     .left-panel {
         width: 250px;

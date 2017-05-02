@@ -66,8 +66,8 @@ class Programms(models.Model):
 
 class SocialProjects(models.Model):
     class Meta:
-        verbose_name_plural = 'Социальные проекты'
-        verbose_name = 'Социальный проект'
+        verbose_name_plural = 'Социальные предпринимательство'
+        verbose_name = 'ССоциальные предпринимательство'
 
     text = RichTextUploadingField(verbose_name='Текст для социальных проектов')
 
