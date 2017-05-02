@@ -30,6 +30,11 @@ class ProgrammsTranslationOptions(TranslationOptions):
 class TourismTranslationOptions(TranslationOptions):
     fields = ('text',)
 
+class LocalLeadTranslationOptions(TranslationOptions):
+    fields = ('text',)
+
+class ExpirienceChangeTranslationOptions(TranslationOptions):
+    fields = ('text',)
 
 class PublicationsTranslationOptions(TranslationOptions):
     fields = ('text',)
@@ -50,3 +55,5 @@ translator.register(Tourism, TourismTranslationOptions)
 translator.register(Publications, PublicationsTranslationOptions)
 translator.register(Logo, LogoTranslationOptions)
 translator.register(SliderMask, SliderMaskTranslationOptions)
+translator.register(LocalLead, LocalLeadTranslationOptions)
+translator.register(ExpirienceChange, ExpirienceChangeTranslationOptions)

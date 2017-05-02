@@ -35,18 +35,29 @@ class SocialProjectsAdmin(TabbedTranslationAdmin):
     list_display = ('text_html',)
 
 
+class LocalLeadAdmin(TabbedTranslationAdmin):
+    list_display = ('text_html',)
+
+
+
+class ExpirienceChangeAdmin(TabbedTranslationAdmin):
+    list_display = ('text_html',)
+
+
 class PublicationsAdmin(TabbedTranslationAdmin):
-    fields = ('title', 'image', 'text', )
-    list_display = ('title', 'text', )
+    fields = ('title', 'image', 'text',)
+    list_display = ('title', 'text',)
 
 
 class LogoAdmin(TabbedTranslationAdmin):
     fields = ('image',)
     list_display = ('title',)
 
+
 class SliderMaskAdmin(TabbedTranslationAdmin):
     fields = ('image',)
     list_display = ('title',)
+
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Sliders, SlidersAdmin)
@@ -58,3 +69,5 @@ admin.site.register(Publications, PublicationsAdmin)
 admin.site.register(Articles, ArticlesAdmin)
 admin.site.register(Logo, LogoAdmin)
 admin.site.register(SliderMask, SliderMaskAdmin)
+admin.site.register(LocalLead, LocalLeadAdmin)
+admin.site.register(ExpirienceChange, ExpirienceChangeAdmin )

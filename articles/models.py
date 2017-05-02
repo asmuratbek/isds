@@ -67,7 +67,7 @@ class Programms(models.Model):
 class SocialProjects(models.Model):
     class Meta:
         verbose_name_plural = 'Социальные предпринимательство'
-        verbose_name = 'ССоциальные предпринимательство'
+        verbose_name = 'Социальные предпринимательство'
 
     text = RichTextUploadingField(verbose_name='Текст для социальных проектов')
 
@@ -81,7 +81,6 @@ class SocialProjects(models.Model):
         return self.text
 
 
-
 class Tourism(models.Model):
     class Meta:
         verbose_name_plural = 'Устойчивый Туризм'
@@ -90,6 +89,40 @@ class Tourism(models.Model):
     image = models.ImageField(upload_to='images/tourism',
                               verbose_name='Изображение для блока устойчивый туризм - 790x780px')
     text = RichTextUploadingField(verbose_name='Текст для устойчивого туризма')
+
+    def text_html(self):
+        return self.text
+
+    text_html.short_description = 'Content'
+    text_html.allow_tags = True
+
+    def __unicode__(self):
+        return self.text
+
+
+class LocalLead(models.Model):
+    class Meta:
+        verbose_name_plural = 'Местные инициативы'
+        verbose_name = "Местная инициатива"
+
+    text = RichTextUploadingField(verbose_name='Текст для местных инициатив')
+
+    def text_html(self):
+        return self.text
+
+    text_html.short_description = 'Content'
+    text_html.allow_tags = True
+
+    def __unicode__(self):
+        return self.text
+
+
+class ExpirienceChange(models.Model):
+    class Meta:
+        verbose_name_plural = 'Обмен опытом'
+        verbose_name = 'Обмен опытом'
+
+    text = RichTextUploadingField(verbose_name='Текст для обмена опытом')
 
     def text_html(self):
         return self.text
