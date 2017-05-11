@@ -23,7 +23,7 @@
                                 <div class="main_content_tile">{% trans 'Биокультурное разнообразие' %}</div>
                                 <div class="main_content_text">
                                     <p>
-                                        {{ concepts.bio }}
+                                        {{ concepts.bio|safe }}
                                     </p></div>
                             </div>
                     </div>
@@ -32,7 +32,7 @@
                         <div class="main_content_text_block">
                             <div class="main_content_tile">{% trans 'Изменение климата' %}</div>
                             <div class="main_content_text"><p>
-                                {{ concepts.climate }}
+                                {{ concepts.climate|safe }}
                             </p></div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         <div class="main_content_text_block">
                             <div class="main_content_tile">{% trans 'Устойчивое развитие' %}</div>
                             <div class="main_content_text"><p>
-                                {{ concepts.development }}
+                                {{ concepts.development|safe }}
                             </p></div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                         <div class="main_content_text_block">
                             <div class="main_content_tile">{% trans 'Слоу Фуд' %}</div>
                             <div class="main_content_text"><p>
-                                {{ concepts.slow_food_text }}
+                                {{ concepts.slow_food_text|safe }}
                             </p></div>
                         </div>
                     </div>

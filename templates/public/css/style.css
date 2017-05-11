@@ -1819,9 +1819,7 @@ body {
 }
 
 .title, .stories_title {
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 .photo_slider .slick-list{
     width:100% !important;
