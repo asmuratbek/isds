@@ -31,9 +31,9 @@
                                     <div class="title">
                                         <a href="{% url 'get_news' pk=news.id %}" style="color: #4db277">
                                             {% if news.class_name == 'col-md-6 col-sm-6 col-xs-12' %}
-                                                {{ news.title|truncatechars:100 }}
+                                                {{ news.title|truncatechars:200 }}
                                             {% elif news.class_name == 'col-md-3 col-sm-6 col-xs-12' %}
-                                                {{ news.title|truncatechars:30 }}
+                                                {{ news.title|truncatechars:90 }}
                                             {% endif %}
                                         </a>
                                     </div>
@@ -127,7 +127,7 @@
 
     <div class="container-fluid subscribe">
         <div class="container subscribe_form">
-            <div class="section_title title_style">{% trans 'БУДЬТЕ В КРУСЕ СОБЫТИЙ' %}</div>
+            <div class="section_title title_style">{% trans 'БУДЬТЕ В КУРСЕ СОБЫТИЙ' %}</div>
             <p class="sub_title">{% trans 'ПОДПИШИТЕСЬ НА РАССЫЛКУ' %}</p>
             <div class="section_title"><span class="describe_title"></span></div>
             <form class="user_info" action="{% url 'save_user' %}" method="POST">

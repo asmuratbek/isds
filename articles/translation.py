@@ -4,7 +4,7 @@ from .models import *
 
 
 class ArticlesTranslationOptions(TranslationOptions):
-    fields = ('title', 'text')
+    fields = ('title', 'text', 'pre_text',)
 
 
 class CategoryTranslationOptions(TranslationOptions):

@@ -603,7 +603,7 @@ body {
 }
 
 .title {
-    font-size: 22px;
+    font-size: 15px;
     font-family: "Gotham Pro Medium", sans-serif;
     color: #4DB277;
     margin-top: 15px;
@@ -1819,9 +1819,7 @@ body {
 }
 
 .title, .stories_title {
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 .photo_slider .slick-list{
     width:100% !important;
