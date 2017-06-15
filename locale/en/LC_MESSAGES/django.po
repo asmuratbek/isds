@@ -152,11 +152,11 @@ msgstr "our partners"
 
 #: templates/main/index.html:124
 msgid "БУДЬТЕ В КРУСЕ СОБЫТИЙ"
-msgstr "BE IN TOUCHE"
+msgstr "KEEP INFORMED"
 
 #: templates/main/index.html:125
 msgid "ПОДПИШИТЕСЬ НА РАССЫЛКУ"
-msgstr "SUBSCRIBE ON NEWS"
+msgstr "SUBSCRIBE TO NEWS"
 
 #: templates/main/index.html:129
 msgid "Имя"
