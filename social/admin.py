@@ -9,3 +9,4 @@ class SocialLinksAdmin(admin.ModelAdmin):
     fields = ['f_link', 'y_link']
 
 admin.site.register(SocialLinks, SocialLinksAdmin)
+
